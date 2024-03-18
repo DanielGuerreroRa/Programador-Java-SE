@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\manana\Desktop\Daniel Guerrero\Ejercicios\Java_Basicos\.metadata\.plugins\org.eclipse.jdt.core
+2510057789.index
+618337575.index
+1865797976.index
