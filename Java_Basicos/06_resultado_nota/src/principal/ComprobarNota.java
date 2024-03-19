@@ -32,7 +32,7 @@ public class ComprobarNota {
 		case 5,6 -> "Aprobado";
 		case 7,8 -> "Notable";
 		case 9,10 -> "Sobresaliente";
-		default -> "Nota no valida";
+		default -> "Nota no valida"; //Si no estuviera el default seria un error de compilación.
 		};
 		System.out.println(resultado);
 
