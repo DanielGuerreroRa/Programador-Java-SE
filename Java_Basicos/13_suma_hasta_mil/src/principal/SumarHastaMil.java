@@ -5,15 +5,14 @@ public class SumarHastaMil {
 	public static void main(String[] args) {
 		//Hasta que número tengo que sumar empezando desde 1 para llegar hasta mil
 		
-		int primerNumero=1;
-		int ultimoNumero=1000;
-		int sumaNumeros = 0;
+		int num=0;
+		int suma=0;
 		
-		for(int i=primerNumero; i<ultimoNumero; i++ ) {
-			sumaNumeros = i;
-		}
-		System.out.println(sumaNumeros);
-		
+		do {
+			num++;
+			suma+=num;
+		}while(suma<1000);
+		System.out.println("Para llegar a mil e tenido que sumar hasta " + num);
 
 	}
 

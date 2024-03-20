@@ -16,7 +16,7 @@ public class Multiplos {
 		do {
 		System.out.println("Introduce el primer número:");
 		num1=sc.nextInt();
-		}while(num1<0);
+		}while(num1<0); //Mientras el numero sea negativo volvera a preguntarlo
 		
 		do {
 		System.out.println("Introduce el segundo número:");
