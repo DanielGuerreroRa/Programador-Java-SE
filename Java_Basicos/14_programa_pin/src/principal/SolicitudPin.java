@@ -24,9 +24,9 @@ public class SolicitudPin {
 				break;
 			} else {
 				intentos++; // Incrementar el contador de intentos fallidos
-				System.out.println("Su PIN es incorrecto le quedan " +(3 - intentos)+ " intentos restantes: " + (3 - intentos));
+				System.out.println("Su PIN es incorrecto le quedan " +(3 - intentos)+ " intentos" );
 				if (intentos == 3) {
-					System.out.println("Ha excedido el número máximo de intentos.");
+					System.out.println("Intruso.. ¡¡NO puedes entrar!!");
 					break; 
 				}
 			}
