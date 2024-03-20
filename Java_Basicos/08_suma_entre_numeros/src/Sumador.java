@@ -9,13 +9,15 @@ public class Sumador {
 		int menor,mayor;
 		int suma = 0;
 		
-		if(n1<n2) {
-			menor=n1;
-			mayor=n2;
-		}else {
-			menor=n2;
-		    mayor=n1;
-		}
+//		if(n1<n2) {
+//			menor=n1;
+//			mayor=n2;
+//		}else {
+//			menor=n2;
+//		    mayor=n1;
+//		}
+		menor=Math.min(n1, n2);
+		mayor=Math.max(n1, n2);
 		for(int i = menor+1; i<mayor; i++) {
 			suma+=i; //suma=suma+i;
 		}

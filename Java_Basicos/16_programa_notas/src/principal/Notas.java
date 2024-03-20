@@ -8,29 +8,31 @@ public class Notas {
 		//Realizar un programa que solicite una a una la introducción de seis notas (double)
 		//Que seran guardadas en un array, y tras ello el programa dara los siguientes datos
 		//Nota media, nota mas alta , aprobados (cada nota que sea un aprobado)
-		double[] notas= new double[6];
+		double[] notas = new double[6];
 		Scanner teclado = new Scanner(System.in);
-		notas[]=teclado.nextDouble();
 		System.out.println("Introduce las notas: ");
-		double notaMedia =0;
-		double suma =0;;
-		double notaAlta=0;
-		int aprobados=0;
+		for (int i = 0; i < notas.length; i++) {
+			notas[i] = teclado.nextDouble();
+		}
 
-		for(int i=0; i<notas.length;i++) {
+		double notaMedia = 0;
+		double suma = 0;
+		double notaAlta = notas[0]; 
+		int aprobados = 0;
+
+		for (int i = 0; i < notas.length; i++) {
 			suma += notas[i];
-            if (notas[i] > notaAlta) {
-                notaAlta = notas[i];
-            }
-            if (notas[i] >= 5) {
-                aprobados++;
-            }
+			if (notas[i] > notaAlta) {
+				notaAlta = notas[i];
+			}
+			if (notas[i] >= 5) {
+				aprobados++;
+			}
 		}
 		notaMedia = suma / notas.length;
-		System.out.println("La nota media es: " +notaMedia);
-		System.out.println("La nota mas alta es: " +notaAlta);
-		System.out.println("Los aprobados son: " +aprobados);
+		System.out.println("La nota media es: " + notaMedia);
+		System.out.println("La nota mas alta es: " + notaAlta);
+		System.out.println("Los aprobados son: " + aprobados);
 
 	}
-
 }
