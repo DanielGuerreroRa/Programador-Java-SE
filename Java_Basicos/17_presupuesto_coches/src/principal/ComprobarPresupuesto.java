@@ -13,17 +13,18 @@ public class ComprobarPresupuesto {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Indiquenos su presupuesto: ");
 		presupuesto=teclado.nextDouble();
-		double contador=0;
+		int contador=0;
 		
-		primero: for(double elemento :precios) {
+		for(double elemento :precios) {
 			if(presupuesto >= elemento) {
 				contador++;
+				System.out.println("Tiene presupuesto para el " +contador+ " coche");
 			}else {
 				System.out.println("No tiene presupuesto suficiente.. ¡¡AHORREEE!!");
-				break primero;
+				break;
 			}
 		}
-		System.out.println("Tiene presupuesto para " +contador+ " posibles coches");
+	
 		
 	}
 

@@ -19,7 +19,7 @@ public class PinString {
 		while (intentos < 3) {
 			System.out.println("Introduzca el codigo PIN: ");
 			codigoPIN = teclado.nextLine();
-			if (codigoPIN.equals(PIN_VALIDO) ) {
+			if (codigoPIN.equals(PIN_VALIDO) ) { //Utilizamos equals en vez de ==
 				System.out.println("PIN correcto");
 				break;
 			} else {
