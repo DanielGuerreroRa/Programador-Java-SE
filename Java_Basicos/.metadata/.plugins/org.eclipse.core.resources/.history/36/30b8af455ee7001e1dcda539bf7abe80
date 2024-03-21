@@ -1,0 +1,29 @@
+package principal;
+
+public class Dado {
+
+	public static void main(String[] args) {
+		//		int dado =(int)(Math.random()*6+1);
+		//		System.out.println(dado);
+
+		//El programa lanzará el dado muchas veces(10000)
+		//Después mostraremos los porcentajes de veces que ha aparecido cada número
+		
+		int[] contador = new int[6]; 
+
+        
+        for (int i = 0; i < 10000;i++) {
+        	int dado = (int) (Math.random()*6+1);
+            contador[dado]++; 
+        
+        }
+        for (int i = 0; i<contador.length; i ++) {
+        	double porcentaje = (double) contador[i];
+        	System.out.println("El contador " +(i+1)+ " tiene un porcentaje del " +porcentaje+ "%" );
+        }
+        
+		
+
+	}
+
+}

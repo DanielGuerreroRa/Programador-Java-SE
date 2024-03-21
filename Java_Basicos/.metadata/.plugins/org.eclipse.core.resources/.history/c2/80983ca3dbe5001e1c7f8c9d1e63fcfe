@@ -1,0 +1,16 @@
+
+public class Sumador {
+
+	public static void main(String[] args) {
+		int n1=20;
+		int n2=11;
+		//Calcular la suma de los números comprendidos entre el mayor y el menor
+		//No incluir los extremos
+		
+		for(int i=20; i>11; i--) {
+			System.out.println(i);
+		}
+
+	}
+
+}

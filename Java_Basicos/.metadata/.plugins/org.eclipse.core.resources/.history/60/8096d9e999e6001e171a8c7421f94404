@@ -1,0 +1,28 @@
+package principal;
+
+import java.util.Scanner;
+
+public class SolicitudPin {
+
+	public static void main(String[] args) {
+		//Hacer un programa que solicite la introducción de un PIN
+		//Si es correcto, le muestra un mensaje y el programa termina
+		//Si es incorrecto, le informa de ello al usuario y le solicita
+		//De nuevo el pin. Si falla tres veces en la introducción del pin
+		//Le muestra mensaje de error, y el programa termina
+		
+		final int PIN_VALIDO=1234;
+		int codigo;
+		Scanner teclado = new Scanner(System.in);
+		do {
+			System.out.println("Introduzca su codigo PIN: ");
+			codigo=teclado.nextInt();
+		}while(codigo == PIN_VALIDO);
+		System.out.println("PIN correcto");
+		}
+		
+		
+
+	}
+
+

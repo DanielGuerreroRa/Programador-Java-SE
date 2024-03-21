@@ -1,0 +1,32 @@
+package principal;
+
+public class Division {
+
+	public static void main(String[] args) {
+		int x=8;
+		int y=15;
+		//mostrar el resultado de dividir mayor entre menor
+		//respetando cifras decimales
+		
+		//ejemplo 1
+		
+		if(x>y) {
+			System.out.println((double)x/y);
+		}else {
+			System.out.println((double)y/x);
+		}
+		
+		//ejemplo 2
+        double rs;
+		
+		if(x>y) {
+			rs=(double)x/y;
+		}else {
+			rs=(double)y/x;
+		}
+		System.out.println(rs);
+	}
+
+	}
+
+
