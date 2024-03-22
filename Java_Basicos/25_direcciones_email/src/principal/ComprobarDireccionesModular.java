@@ -1,6 +1,6 @@
 package principal;
 
-public class ComprobardireccionesModular {
+public class ComprobarDireccionesModular {
 
 	public static void main(String[] args) {
 		String emails="andregp@gmail.com,alfonso_garcia@hotmail.es,btorija@gmail.com,leticia-perez98@yahoo.es,leopoldoJimenez@hotmail.com";
