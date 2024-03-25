@@ -1,0 +1,15 @@
+package principal;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		int num=7;
+		//Este programa calcula y muestra el factorial de un número
+		for(int i = 1; i<num ; i++) {
+			System.out.println(i);
+		}
+
+
+	}
+
+}
