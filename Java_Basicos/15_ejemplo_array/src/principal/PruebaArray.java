@@ -9,9 +9,8 @@ public class PruebaArray {
 		
 		for(int i=0;i<notas.length;i++) {
 			notas[i]++;
+			System.out.println("Las notas de los alumnos son: " +notas[i]);
 		}
-		for(int nota:notas) {
-			System.out.println("Las notas de los alumnos son: " +notas);
-		}
+		
 	}
 }
