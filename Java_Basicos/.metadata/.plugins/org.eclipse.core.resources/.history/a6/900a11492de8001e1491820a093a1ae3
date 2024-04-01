@@ -1,0 +1,28 @@
+package principal;
+
+public class ComprobarDireccionesCompleto {
+
+	public static void main(String[] args) {
+		String emails="andregp@gmail.com,alfonso_garcia@hotmail.es,btorija@gmail.com,leticia-perez98@yahoo.es,leopoldoJimenez@hotmail.com,cominidad-madrid@cm.org,vodagone_informacion@vodafone.net";
+
+		//mostras cuantas direcciones de cada dominio hay
+		String[] emailArray = emails.split(",");
+		
+
+		String[] dominios = (emailArray);
+		int[] contarDom = new int[dominios.length];
+
+		for (int i = 0; i < emailArray.length; i++) {
+			for (int j = 0; j < dominios.length; j++) {
+				if (emailArray[i].endsWith(dominios[j])) {
+					contarDom[j]++;
+					break;
+				}
+			}
+		}
+		System.out.println(dominios);
+
+
+	}
+
+}

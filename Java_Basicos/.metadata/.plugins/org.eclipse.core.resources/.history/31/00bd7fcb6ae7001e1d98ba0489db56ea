@@ -1,0 +1,15 @@
+package principal;
+
+public class ContarVocales {
+
+	public static void main(String[] args) {
+		//¿Cuantas vocales tiene este texto?
+		String cad="Esto es un nuevo texto";
+		
+		
+		
+        long totalVocales = cad.toLowerCase().chars().filter(vocales -> "aeiou".indexOf(vocales) != -1).count();
+        
+        System.out.println("Hay un total de " +totalVocales+ "vocales" );
+    }
+}

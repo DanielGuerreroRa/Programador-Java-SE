@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;principal.puebaTexto.java&apos; to &apos;PruebaTexto.java&apos;&#x0D;&#x0A;- Original project: &apos;20_prueba_string&apos;&#x0D;&#x0A;- Original element: &apos;principal.puebaTexto.java&apos;&#x0D;&#x0A;- Renamed element: &apos;principal.PruebaTexto.java&apos;" description="Rename compilation unit &apos;puebaTexto.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;principal{puebaTexto.java" name="PruebaTexto.java" references="false" stamp="1711014447443" version="1.0"/>
+</session>

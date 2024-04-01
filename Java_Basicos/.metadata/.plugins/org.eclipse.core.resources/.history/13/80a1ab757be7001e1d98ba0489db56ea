@@ -1,0 +1,31 @@
+package principal;
+
+import java.util.Scanner;
+
+public class Presupuesto {
+
+	public static void main(String[] args) {
+		//Dado los datos de coches, se le pedira al cliente cual
+		//es su presupuesto y el programa indicara a cuantos coches puede optar
+		
+		String[] precios= {"Volvo-19000","Audi-23450","Seat-15251","Bmw-30251","Renault-15365","Opel-19251"};
+        double presupuesto;
+		int n=Integer.parseInt("100");
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Ingrese su presupuesto: ");
+		presupuesto=teclado.nextDouble();
+		int cochesDisponibles=0;
+		
+		
+		for (String precio : precios) {
+
+            int precioCoche = Integer.parseInt(precios[1]);
+
+            if (precioCoche <= presupuesto) {
+                cochesDisponibles++;
+    
+            }
+        }
+        System.out.println("Puede optar a "+cochesDisponibles);
+    }
+}

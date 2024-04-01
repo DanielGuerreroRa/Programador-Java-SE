@@ -1,0 +1,29 @@
+package principal;
+
+public class ComprobardireccionesModular {
+
+	public static void main(String[] args) {
+		String emails="andregp@gmail.com,alfonso_garcia@hotmail.es,btorija@gmail.com,leticia-perez98@yahoo.es,leopoldoJimenez@hotmail.com";
+
+		//Indicar cuantas direcciones hay de cada dominio .com . es
+		//Y separar los distintos correos con la ,
+
+		String[] correos = emails.split(",");
+		int contadorCom=0;
+		int contadorEs=0;
+		
+		for (String dominio: correos) {
+		    if (dominio.endsWith(".com")) {   //Utilizamos .endWith y prueba si esta cadena termina con el sufijo especificado.
+                contadorCom++;
+            } else if (dominio.endsWith(".es")) {
+                contadorEs++;
+            }
+        
+		}
+		System.out.println("Direcciones de correo con dominio .com: "+contadorCom);
+        System.out.println("Direcciones de correo con dominio .es: "+contadorEs);
+
+	}
+	
+
+}

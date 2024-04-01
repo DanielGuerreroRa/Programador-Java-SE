@@ -1,0 +1,28 @@
+package principal;
+
+public class ComprobarDirecciones {
+
+	public static void main(String[] args) {
+		String email="andregp@gmail.com,alfonso_garcia@hotmail.es,btorija@gmail.com,leticia-perez98@yahoo.es,leopoldoJimenez@hotmail.com";
+
+		//Indicar cuantas direcciones hay de cada dominio .com . es
+		//Y separar los distintos correos con la ,
+
+		String[] correos = email.split(",");
+		int contadorCom=0;
+		int contadorEs=0;
+		
+		for (String dominio: correos) {
+		    if (dominio.endsWith(".com")) {
+                contadorCom++;
+            } else if (dominio.endsWith(".es")) {
+                contadorEs++;
+            }
+        
+		}
+		System.out.println("Direcciones de correo con dominio .com: "+contadorCom);
+        System.out.println("Direcciones de correo con dominio .com: "+contadorEs);
+
+	}
+
+}

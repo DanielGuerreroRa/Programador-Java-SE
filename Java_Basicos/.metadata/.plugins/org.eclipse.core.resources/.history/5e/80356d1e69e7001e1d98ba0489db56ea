@@ -1,0 +1,16 @@
+package principal;
+
+public class ContarVocales {
+
+	public static void main(String[] args) {
+		//¿Cuantas vocales tiene este texto?
+		String cad="Esto es un nuevo texto";
+		
+		
+		// Utilizar una expresión regular para encontrar todas las vocales en la cadena
+        long totalVocales = cad.toLowerCase().chars().filter(c -> "aeiou".indexOf(c) != -1).count();
+        
+        // Mostrar el resultado
+        System.out.println("Total de vocales: " + totalVocales);
+    }
+}
