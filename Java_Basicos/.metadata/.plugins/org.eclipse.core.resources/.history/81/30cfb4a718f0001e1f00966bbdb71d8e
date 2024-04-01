@@ -2,7 +2,6 @@ package principal;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class SorteoPrimitiva {
 
@@ -31,32 +30,26 @@ public class SorteoPrimitiva {
 			return; // Salir del programa si los datos son erroneos
 		}
 
-        //Eliminar números duplicados por el usuario
-		combinacionUsuario=Arrays.stream(combinacionUsuario.split(","))
-				.distinct()
-				.collect(Collectors.joining(","));
 		
-
+		
 		//Generar la combinación ganadora
 		combinacionNumerica= generarCombinacion(combinacionUsuario);
 		combinacionGanadora = generarCombinacionGanadora();
 		aciertos=calcularAciertos(combinacionNumerica,combinacionGanadora);
-
+		
 		//Mostrar datos
-		System.out.println("Combinación usuario:" +Arrays.toString(combinacionNumerica));
-		System.out.println("Combinación ganadora:" +Arrays.toString(combinacionGanadora));
-		System.out.println("Has tenido " +aciertos+ " aciertos");
-
-		//¿Cuantas veces tengo que jugar para poder conseguir 6 aciertos?
-		/*long veces=0;
-				combinacionNumerica= new int[]{7,13,23,36,39,42};
+				System.out.println("Combinación usuario:" +Arrays.toString(combinacionNumerica));
+				System.out.println("Combinación ganadora:" +Arrays.toString(combinacionGanadora));
+				System.out.println("Has tenido " +aciertos+ " aciertos");
+				
+		//¿Cuantas veces tengo que jugar para poder consegir 6 aciertos?
+				long veces=0;
 				do {
-					//generarCombinacionGanadora();
+					combinacionNumerica=generarCombinacionGanadora();
 					combinacionGanadora=generarCombinacionGanadora();
-					aciertos=calcularAciertos(combinacionNumerica,combinacionGanadora);
 					veces++;
 				}while(aciertos<6);
-				System.out.println("He tenido que jugar: "+veces+" veces");*/
+				System.out.println("He tenido que jugar "+veces+ " veces");
 
 	}
 
@@ -80,10 +73,10 @@ public class SorteoPrimitiva {
 			numero = (int) (Math.random() * 99 + 1); //se genera un número aleatorio entre 1 y 99 y se guarda en la variable numero
 			if (!repetido(generados, numero, totales)) { //Verificamos si este número generado ya existe en el arreglo utilizando la función repetido()
 				generados[totales] = numero; //Si el número no está repetido, se guarda en generados en la posición indicada por totales
-				totales++; //Se incrementa la variable
+				totales++;
 			}
-		} while (totales < 6); //Continúa generando hasta que se hayan generado 6 números únicos
-		return generados; //Devuelve los numeros generados
+		} while (totales < 6);
+		return generados;
 	}
 
 	//Método para números repetidos
