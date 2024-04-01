@@ -1,0 +1,29 @@
+package principal;
+
+import java.util.Scanner;
+
+public class SorteoPrimitiva {
+
+	public static void main(String[] args) {
+		//Introduce tu combinación (seis número separados por una coma)
+		//Y que devuelva estos mensajes
+		//Esta es tu combinación:
+		//Esta es la combinación ganadora:
+		//Has tenido ... aciertos.
+		
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce tu combinación :");
+        String combinacion = teclado.nextLine();
+        
+        String[] numerosUsuario = combinacion.split(",");
+        
+        
+ 
+   
+        
+
+		
+
+	}
+
+}
