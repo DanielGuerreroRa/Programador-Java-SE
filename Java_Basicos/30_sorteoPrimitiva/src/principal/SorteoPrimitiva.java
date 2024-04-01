@@ -1,0 +1,107 @@
+package principal;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SorteoPrimitiva {
+
+	public static void main(String[] args) {
+		//Introduce tu combinación (seis número separados por una coma)
+		//Y que devuelva estos mensajes
+		//Esta es tu combinación:
+		//Esta es la combinación ganadora:
+		//Has tenido ... aciertos.
+
+		//Variables
+		int[] combinacionNumerica;
+		int[] combinacionGanadora;
+		int aciertos;
+
+		//Consola
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce tu combinación :");
+		String combinacionUsuario = teclado.nextLine();
+		//Separar las combinaciones con una ,
+		String[] numerosUsuario = combinacionUsuario.split(",");
+
+		//Solo puede escribir 6 combianciones
+		if (numerosUsuario.length != 6) {
+			System.out.println("¡¡NO METISTES BIEN LOS DATOS!!");
+			return; // Salir del programa si los datos son erroneos
+		}
+
+		
+		
+		//Generar la combinación ganadora
+		combinacionNumerica= generarCombinacion(combinacionUsuario);
+		combinacionGanadora = generarCombinacionGanadora();
+		aciertos=calcularAciertos(combinacionNumerica,combinacionGanadora);
+		
+		//Mostrar datos
+				System.out.println("Combinación usuario:" +Arrays.toString(combinacionNumerica));
+				System.out.println("Combinación ganadora:" +Arrays.toString(combinacionGanadora));
+				System.out.println("Has tenido " +aciertos+ " aciertos");
+				
+		//¿Cuantas veces tengo que jugar para poder consegir 6 aciertos?
+				long veces=0;
+				do {
+					combinacionNumerica=generarCombinacionGanadora();
+					combinacionGanadora=generarCombinacionGanadora();
+					veces++;
+				}while(aciertos<6);
+				System.out.println("He tenido que jugar "+veces+ " veces");
+
+	}
+
+	//Método para generar combinación
+	static int[] generarCombinacion(String combinacion) {
+		String[] valores=combinacion.split(",");
+		int[] numeros= new int[valores.length];
+		for(int i=0; i<valores.length; i++) {
+			numeros[i]=Integer.parseInt(valores[i]);
+		}
+		return numeros;
+	}
+
+	//Método para generar una combinación ganadora 
+	static int[] generarCombinacionGanadora() {
+		int[] generados = new int[6];  //Declaramos generados con tamaño 6 que almacenará la combinación ganadora
+		int numero, totales = 0; //Se declara la variable numero que almacenara temporalmente el número generado aleatoriamente y se declara la variable totales que llevará el control de cuántos números se han generado y almacenado en el arreglo hasta ahora.
+
+		do { //Se ejecutará al menos una vez y seguirá ejecutándose hasta que se hayan generado y almacenado 6 números
+			//Generar el número y si no se repite continuar
+			numero = (int) (Math.random() * 99 + 1); //se genera un número aleatorio entre 1 y 99 y se guarda en la variable numero
+			if (!repetido(generados, numero, totales)) { //Verificamos si este número generado ya existe en el arreglo utilizando la función repetido()
+				generados[totales] = numero; //Si el número no está repetido, se guarda en generados en la posición indicada por totales
+				totales++;
+			}
+		} while (totales < 6);
+		return generados;
+	}
+
+	//Método para números repetidos
+	static boolean repetido(int[] numeros, int num, int totales) {
+		boolean resultado = false;
+		for (int i = 0; i < totales; i++) {
+			if (numeros[i] == num) { //Repetidos
+				resultado = true;
+				break;
+			}
+		}
+		return resultado;
+	}
+
+	//Método para calcular los aciertos
+	static int calcularAciertos(int[] numerosUsuario, int[] combinacionGanadora) {
+		int aciertos = 0; //La utilizaremos para contar cuántos números coinciden entre la combinacionUsuario y  combinacionGanadora
+		for (int numero : numerosUsuario) {   //Utilizamos un bucle for-each para recorrer cada número en el array numerosUsuario.
+			for (int ganador : combinacionGanadora) { //Igual con combinacionGanadora 
+				if (numero == ganador) {  //Si el número coincide con la combinación ganadora se incrementa la variable
+					aciertos++; //Se incrementa la variable
+					break; //Salir del bucle
+				}
+			}
+		}
+		return aciertos; //Una vez que se han comparado todos los números del usuario con los de la combinación ganadora, se retorna el número total de aciertos.
+	}
+}
