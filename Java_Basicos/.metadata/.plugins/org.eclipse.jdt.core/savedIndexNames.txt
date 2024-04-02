@@ -20,7 +20,6 @@ INDEX VERSION 1.134+C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\
 2001667471.index
 1161674310.index
 3313709936.index
-2977952157.index
 750524440.index
 718412230.index
 1022717576.index

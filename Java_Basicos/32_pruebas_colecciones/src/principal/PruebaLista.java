@@ -21,7 +21,8 @@ public class PruebaLista {
 		}
 		
 		for(int i=0;i<cadenas.size();i++)
-		System.out.println(cadenas.get(i));
+		System.out.println(cadenas.get(i));//Para mostrar en consola toda la lista de cadenas
+		
 		
 		
 

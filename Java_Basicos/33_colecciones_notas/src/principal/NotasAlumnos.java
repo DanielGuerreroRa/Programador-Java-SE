@@ -15,20 +15,50 @@ public class NotasAlumnos {
 		//-Aprobados
 		//-Nota más alta 
 
-			ArrayList<Double> notas=new ArrayList<>();
-			double nota;
-			String respuesta;
-			Scanner sc=new Scanner(System.in);
-			do {
+		ArrayList<Integer> notas=new ArrayList<Integer>();
+		int nota;
+		String respuesta;
+		Scanner sc=new Scanner(System.in);
 
-				System.out.println("Introduce la nota:"); //Pedir la nota
-				nota=sc.nextInt(); //Escribirla
-				notas.add(nota);  ////Guardarla
-				System.out.println("Quieres introducir otra nota?(s/n)"); //Preguntar si quiere introducir más
-				respuesta=sc.nextLine();
-				
-			}while(respuesta.equalsIgnoreCase("n"));
+		do {
+			System.out.println("Introduce nota"); //Pedir la nota
+			nota=Integer.parseInt(sc.nextLine()); //Convertirla para que la lea en string //Escribirla
+			notas.add(nota); //Guardarla
+			System.out.println("Quieres introducir otra nota?(s/n)"); //Pregunbar si quiere ingresar otra
+			respuesta=sc.nextLine();
 
-		}
-
+		}while(respuesta.equalsIgnoreCase("s"));
+		System.out.println("Nota media: " +calcularMedia(notas));
+		System.out.println("Alumnos aprobados: " +totalAprobados(notas));
+		System.out.println("Nota mas alta: " +notaMayor(notas));
 	}
+
+	static double calcularMedia(ArrayList<Integer> notas) {
+		double notaMedia=0;
+		for(Integer nota :notas) {
+			notaMedia+=nota;
+		}
+		return notaMedia/notas.size();
+	}
+
+	static int totalAprobados(ArrayList<Integer> notas) {
+		int aprobados=0;
+		for (int nota : notas) {
+			if (nota >= 5) {
+				aprobados++;
+			}
+		}
+		return aprobados;
+	}
+	static int notaMayor(ArrayList<Integer> notas) {
+		int mayor=notas.get(0);
+		for(Integer nota:notas) {
+			if(nota>mayor) {
+				mayor=nota;
+			}
+		}
+		return mayor;
+	}
+
+}
+
