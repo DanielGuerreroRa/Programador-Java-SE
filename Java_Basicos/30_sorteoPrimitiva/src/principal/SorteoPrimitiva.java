@@ -61,13 +61,13 @@ public class SorteoPrimitiva {
 	}
 
 	//Método para generar combinación
-	static int[] generarCombinacion(String combinacion) {
-		String[] valores=combinacion.split(",");
-		int[] numeros= new int[valores.length];
-		for(int i=0; i<valores.length; i++) {
-			numeros[i]=Integer.parseInt(valores[i]);
+	static int[] generarCombinacion(String combinacion) { //Se define un método llamado generarCombinacion que recibe una cadena de texto combinacion como argumento y devuelve un arreglo de enteros
+		String[] valores=combinacion.split(","); //Dividimos la cadena de texto combinacion en partes usando la "," y se almacenan en valores
+		int[] numeros= new int[valores.length]; //Creamos un array con la misma longitud que valores.
+		for(int i=0; i<valores.length; i++) {  
+			numeros[i]=Integer.parseInt(valores[i]); //Se itera valores y se convierte la cadena en un entero.
 		}
-		return numeros;
+		return numeros;  //Se devuelve el resultado del método
 	}
 
 	//Método para generar una combinación ganadora 
@@ -86,13 +86,13 @@ public class SorteoPrimitiva {
 		return generados; //Devuelve los numeros generados
 	}
 
-	//Método para números repetidos
-	static boolean repetido(int[] numeros, int num, int totales) {
-		boolean resultado = false;
-		for (int i = 0; i < totales; i++) {
-			if (numeros[i] == num) { //Repetidos
-				resultado = true;
-				break;
+	//Método para números repetidos                                           
+	static boolean repetido(int[] numeros, int num, int totales) {  //numeros:enteros en el que se busca el número repetido, num: el número que se está buscando, totales: la cantidad total de numeros que se deben revisar.
+		boolean resultado = false; //Esta variable se utilizará para indicar si se encuentra o no el número repetido en el arreglo.
+		for (int i=0; i<totales; i++) {//Se itera los numeros hasta la posición totales. En cada iteración, se verifica si el elemento en la posición actual es igual al número num
+			if (numeros[i] == num) { //Repetidos //En cada iteración, se verifica si el elemento en la posición actual es igual al número num
+				resultado = true; //Si se encuentra una coincidencia, se establece resultado en true
+				break; //Si se encuentra una coincidencia, se establece resultado en true y se sale del bucle
 			}
 		}
 		return resultado;
