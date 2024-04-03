@@ -20,21 +20,25 @@ public class PruebaEmpleados {
 			switch(opcion) {
 				case 1:
 					agregarEmpleado();
+					System.out.println();
 					break;
 				case 2:
 					buscarEmpleado();
+					System.out.println();
 					break;
 				case 3:
 					eliminarEmpleado();
+					System.out.println();
 					break;
 				case 4:
 					mostrarEmpleados();
+					System.out.println();
 					break;
 				case 5:
-					System.out.println("Adios!");
+					System.out.println("¡Hasta pronto!");
 					break;
 				default:
-					System.out.println("Opción no válida!");
+					System.out.println("--Opción no válida--");
 			}
 		}while(opcion!=5);
 
@@ -58,16 +62,16 @@ public class PruebaEmpleados {
 		if(service.agregarEmpleado(codigo, nombre)) {
 			System.out.println("Añadido!");
 		}else {
-			System.out.println("Código ya existente, no se añadió!");
+			System.out.println("--Código ya existente, no se añadió--");
 		}
 	}
 	static void buscarEmpleado() {
 		Scanner teclado=new Scanner(System.in);
-		System.out.println("Código empleado:");
+		System.out.println("Código empleado: ");
 		int codigo=Integer.parseInt(teclado.nextLine());
 		String nombre=service.buscarEmpleado(codigo);
 		if(nombre==null) {
-			System.out.println("No existe empleado");
+			System.out.println("--No existe empleado--");
 		}else {
 			System.out.println("El empleado es: "+nombre);
 		}
@@ -78,7 +82,7 @@ public class PruebaEmpleados {
 		int codigo=Integer.parseInt(teclado.nextLine());
 		String nombre=service.eliminarEmpleado(codigo);
 		if(nombre==null) {
-			System.out.println("No existe empleado");
+			System.out.println("--No existe empleado--");
 		}else {
 			System.out.println("El empleado eliminado es: "+nombre);
 		}
