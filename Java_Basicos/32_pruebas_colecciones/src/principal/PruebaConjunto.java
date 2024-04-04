@@ -15,6 +15,7 @@ public class PruebaConjunto {
 		for(Double n:nums) {
 			System.out.println(n);
 		}
+		//En este caso no le suma +1 al objeto del conjunto
 
 	}
 

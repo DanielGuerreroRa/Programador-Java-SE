@@ -33,7 +33,7 @@ public class Pruebaconjunto2 {
 			System.out.println(n.getNum());
 		}
 		
-		
+		//En este caso si le suma +1 al objeto del conjunto
 
 
 
