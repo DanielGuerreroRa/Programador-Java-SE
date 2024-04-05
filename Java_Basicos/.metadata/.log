@@ -1645,3 +1645,250 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-04-05 09:09:49.767 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-04-05 09:10:19.888
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-05 09:10:20.102
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-05 09:11:01.598
+!MESSAGE Logback config file: C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_Basicos\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-05 09:11:07.872
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\manana'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:52.171
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:54.096
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:54.114
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:54.154
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:54.176
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:54.199
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.jdt.junit 4 4 2024-04-05 10:44:54.218
+!MESSAGE Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	... 1 more
+Root exception:
+Java Model Exception: Error in Java Model (code 969): TestServicePedido [in [Working copy] TestServicePedido.java [in testing [in src [in 40_gestor_pedidos]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:605)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:249)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:263)
+	at org.eclipse.jdt.internal.core.SourceType.getMethods(SourceType.java:498)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectDeclaredMethodNames(TestSearchEngine.java:120)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.collectMethodNames(TestSearchEngine.java:88)
+	at org.eclipse.jdt.internal.junit.util.TestSearchEngine.lambda$1(TestSearchEngine.java:72)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
