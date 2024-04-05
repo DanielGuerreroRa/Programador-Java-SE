@@ -2,17 +2,17 @@ package view;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 import model.Pedido;
-import service.PedidoService;
+import service.PedidosService;
 
-
-
-public class PruebaPedido {
-	static PedidoService service=new PedidoService();
+public class PedidosMenu {
+	static PedidosService service=new PedidosService();
 	public static void main(String[] args) throws ParseException {
 		Scanner sc=new Scanner(System.in);
 		int opcion;
@@ -30,7 +30,6 @@ public class PruebaPedido {
 					break;
 				case 3:
 					pedidosEntreFechas();
-					System.out.println();
 					break;
 				case 4:
 					System.out.println("Adios!");
@@ -43,7 +42,6 @@ public class PruebaPedido {
 	}
 	static void presentarMenu() {
 		System.out.println("""
-				
 				1.- Agregar Pedido
 				2.- Pedido más reciente
 				3.- Pedidos entre fechas
@@ -53,35 +51,35 @@ public class PruebaPedido {
 	}
 	static void agregarPedido() throws ParseException  {
 		Scanner sc=new Scanner(System.in);
-		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");		
+		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");		
 		System.out.println("Producto:");
 		String producto=sc.nextLine();
 		System.out.println("Unidades:");
 		int unidades=Integer.parseInt(sc.nextLine());
 		System.out.println("Fecha pedido (dia/mes/año):");
-		Date fecha=sdf.parse(sc.nextLine());	
+		LocalDate fecha=LocalDate.parse(sc.nextLine(),sdf);	
 		Pedido p=new Pedido(producto, unidades, fecha);
 		service.nuevoPedido(p);
 	}
 	static void mostrarReciente() {
 		Pedido p=service.pedidoMasReciente();
-		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		System.out.print("Producto: "+p.getProducto()+" ");
 		System.out.print("Unidades: "+p.getUnidades()+" ");
-		System.out.println("Fecha pedido: "+sdf.format(p.getFechaPedido())+" ");
+		System.out.println("Fecha pedido: "+p.getFechaPedido().format(sdf)+" ");
 	}
 	static void pedidosEntreFechas() throws ParseException {
 		Scanner sc=new Scanner(System.in);
-		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");	
+		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");	
 		System.out.println("Fecha inicio (dia/mes/año):");
-		Date fecha1=sdf.parse(sc.nextLine());	
+		LocalDate fecha1=LocalDate.parse(sc.nextLine(),sdf);	
 		System.out.println("Fecha límite (dia/mes/año):");
-		Date fecha2=sdf.parse(sc.nextLine());	
+		LocalDate fecha2=LocalDate.parse(sc.nextLine(),sdf);	
 		ArrayList<Pedido> pedidosEncontrados=service.pedidosEntreFechas(fecha1, fecha2);
 		for(Pedido p:pedidosEncontrados) {
 			System.out.print("Producto: "+p.getProducto()+" ");
 			System.out.print("Unidades: "+p.getUnidades()+" ");
-			System.out.println("Fecha pedido: "+sdf.format(p.getFechaPedido())+" ");
+			System.out.println("Fecha pedido: "+p.getFechaPedido().format(sdf)+" ");
 		}
 	}
 

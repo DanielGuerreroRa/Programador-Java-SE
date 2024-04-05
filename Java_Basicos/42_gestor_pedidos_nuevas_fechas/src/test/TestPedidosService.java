@@ -1,0 +1,29 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+class TestPedidosService {
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@Test
+	void testNuevoPedido() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testPedidoMasReciente() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testPedidosEntreFechas() {
+		fail("Not yet implemented");
+	}
+
+}

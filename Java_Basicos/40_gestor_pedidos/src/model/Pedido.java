@@ -2,6 +2,8 @@ package model;
 
 import java.util.Date;
 
+
+
 //Programa para manejar pedidos. Un pedido se caracteriza por producto,unidades,fechaPedido.
 //Se presenta el siguiente menú:
 //1.- Nuevo pedido
@@ -13,53 +15,35 @@ import java.util.Date;
 //3: Se solicitan dos fechas, y se muestran los pedidos realizados
 //en ese rango de fechas
 public class Pedido {
-	//Atributos
 	private String producto;
 	private int unidades;
-	private Date fechaPedido;
-	
-	//Constructor
-	public Pedido() {
-		
-	}
-	
+	public Date fechaPedido;
 	public Pedido(String producto, int unidades, Date fechaPedido) {
 		super();
 		this.producto = producto;
 		this.unidades = unidades;
 		this.fechaPedido = fechaPedido;
 	}
-
-	//Setters y Getters
+	public Pedido() {
+		super();
+	}
 	public String getProducto() {
 		return producto;
 	}
-
 	public void setProducto(String producto) {
 		this.producto = producto;
 	}
-
 	public int getUnidades() {
 		return unidades;
 	}
-
 	public void setUnidades(int unidades) {
 		this.unidades = unidades;
 	}
-
 	public Date getFechaPedido() {
 		return fechaPedido;
 	}
-
 	public void setFechaPedido(Date fechaPedido) {
 		this.fechaPedido = fechaPedido;
 	}
 	
-
-	
-	
-	
-	
-	
-
 }
