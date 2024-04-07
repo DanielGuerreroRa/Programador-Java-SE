@@ -27,4 +27,9 @@
 		<section name="ImportExportWizard.dialogBounds">
 		</section>
 	</section>
+<<<<<<< Updated upstream
+=======
+	<section name="FileSystemImportWizard">
+	</section>
+>>>>>>> Stashed changes
 </section>
