@@ -51,7 +51,7 @@ public class PruebaPedido {
 				
 				""");
 	}
-	static void agregarPedido() throws ParseException  {
+	static void agregarPedido()  {
 		Scanner sc=new Scanner(System.in);
 		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");		
 		System.out.println("Producto:");
@@ -59,9 +59,14 @@ public class PruebaPedido {
 		System.out.println("Unidades:");
 		int unidades=Integer.parseInt(sc.nextLine());
 		System.out.println("Fecha pedido (dia/mes/año):");
-		Date fecha=sdf.parse(sc.nextLine());	
-		Pedido p=new Pedido(producto, unidades, fecha);
-		service.nuevoPedido(p);
+		try {
+			Date fecha=sdf.parse(sc.nextLine());	
+			Pedido p=new Pedido(producto, unidades, fecha);
+			service.nuevoPedido(p);
+		}catch(ParseException ex) {
+			ex.printStackTrace();
+			System.out.println("Fecha no válida!, el pedido no se ha guardado");
+		}
 	}
 	static void mostrarReciente() {
 		Pedido p=service.pedidoMasReciente();
@@ -70,18 +75,24 @@ public class PruebaPedido {
 		System.out.print("Unidades: "+p.getUnidades()+" ");
 		System.out.println("Fecha pedido: "+sdf.format(p.getFechaPedido())+" ");
 	}
-	static void pedidosEntreFechas() throws ParseException {
+	static void pedidosEntreFechas()  {
 		Scanner sc=new Scanner(System.in);
 		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");	
 		System.out.println("Fecha inicio (dia/mes/año):");
-		Date fecha1=sdf.parse(sc.nextLine());	
-		System.out.println("Fecha límite (dia/mes/año):");
-		Date fecha2=sdf.parse(sc.nextLine());	
-		ArrayList<Pedido> pedidosEncontrados=service.pedidosEntreFechas(fecha1, fecha2);
-		for(Pedido p:pedidosEncontrados) {
-			System.out.print("Producto: "+p.getProducto()+" ");
-			System.out.print("Unidades: "+p.getUnidades()+" ");
-			System.out.println("Fecha pedido: "+sdf.format(p.getFechaPedido())+" ");
+		try {
+			Date fecha1=sdf.parse(sc.nextLine());	
+			System.out.println("Fecha límite (dia/mes/año):");
+			Date fecha2=sdf.parse(sc.nextLine());	
+			ArrayList<Pedido> pedidosEncontrados=service.pedidosEntreFechas(fecha1, fecha2);
+			for(Pedido p:pedidosEncontrados) {
+				System.out.print("Producto: "+p.getProducto()+" ");
+				System.out.print("Unidades: "+p.getUnidades()+" ");
+				System.out.println("Fecha pedido: "+sdf.format(p.getFechaPedido())+" ");
+			}
+		}
+		catch(ParseException ex) {
+			ex.printStackTrace();
+			System.out.println("Fecha no válida!!");
 		}
 	}
 

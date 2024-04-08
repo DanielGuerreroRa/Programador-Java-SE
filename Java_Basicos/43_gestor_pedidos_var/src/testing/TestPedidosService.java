@@ -36,5 +36,11 @@ class TestPedidosService {
 		LocalDate fmax=LocalDate.of(2022, 12,31);
 		assertEquals(2, service.pedidosEntreFechas(fmin, fmax).size());
 	}
-
+    
+	@Test
+	void proximaFecha() {
+		
+        LocalDate fechaPrueba = LocalDate.of(2024, 4, 8);
+        Pedido proximoPedido = service.proximaFecha(fechaPrueba);
+	}
 }

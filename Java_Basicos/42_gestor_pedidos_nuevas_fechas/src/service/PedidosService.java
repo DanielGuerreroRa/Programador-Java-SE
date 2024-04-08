@@ -1,6 +1,7 @@
 package service;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -37,5 +38,19 @@ public class PedidosService {
 			}
 		}
 		return aux;
+	}
+	public Pedido proximaFecha(LocalDate fecha) {
+		Pedido aux=new Pedido();
+		aux.setFechaPedido(LocalDate.of(1,1,1));
+		//Comprobamos la diferencia de dias entre la fecha de cada pedido y la párametro, con la diferencia de días entre
+		//la fecha auxiliar y la parámetro. Si la fecha del pedido es inferior, actualizamos la variable auxiliar
+		for(Pedido p:pedidos) {
+			if(Math.abs(ChronoUnit.DAYS.between(p.getFechaPedido(), fecha)) 
+					<Math.abs(ChronoUnit.DAYS.between(p.getFechaPedido(),fecha))) {	
+				aux=p;
+			}
+		}
+		return aux;
+	
 	}
 }

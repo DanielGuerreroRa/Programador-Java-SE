@@ -38,4 +38,17 @@ public class PedidosService {
 		}
 		return aux;
 	}
+	public Pedido proximaFecha(LocalDate fecha) {
+		Pedido aux=null;
+		for(Pedido p:pedidos) {
+			if(p.getFechaPedido().isBefore(fecha)) {
+				fecha=p.getFechaPedido();
+				aux=p;
+			}
+		}
+		return aux;
+	
+	}
+			
+
 }
