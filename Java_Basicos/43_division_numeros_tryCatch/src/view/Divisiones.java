@@ -24,6 +24,10 @@ public class Divisiones {
 		catch(ArithmeticException ex) {
 			System.out.println("--La división entre 0 no es válida--");
 		}
+		//multicatch
+				/*catch(InputMismatchException|ArithmeticException ex) {
+					System.out.println("error en los datos");
+				}*/
 
 	}
 

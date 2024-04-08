@@ -1,0 +1,15 @@
+lunes
+martes
+miercoles
+jueves
+viernes
+sabado
+domingo
+DIAS DE LA SEMANA
+lunes
+martes
+miercoles
+jueves
+viernes
+sabado
+domingo
