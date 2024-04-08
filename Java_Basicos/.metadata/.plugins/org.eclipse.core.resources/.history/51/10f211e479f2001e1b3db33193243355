@@ -1,0 +1,19 @@
+package view;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class PruebaFecha {
+
+	public static void main(String[] args) {
+		//Fecha y hora actual
+		Date f1=new Date();
+		System.out.println(f1);
+		//Fecha y hora concreta
+		Calendar cal=Calendar.getInstance();
+		cal.set(20233,0,30,10,20,35);
+		System.out.println(cal);
+
+	}
+
+}

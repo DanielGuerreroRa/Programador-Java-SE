@@ -1,0 +1,20 @@
+package principal;
+
+import java.util.ArrayList;
+
+public class PruebaLista {
+
+	public static void main(String[] args) {
+		ArrayList<String> cadenas= new ArrayList<>();
+		ArrayList<Integer> numeros= new ArrayList<>();
+		var decimales=new ArrayList<Double>();
+		System.out.println(cadenas.size());
+		cadenas.add("lunes");
+		cadenas.add("martes");
+		cadenas.add(0,"miercoles");
+		cadenas.add(7,"lunes");
+		
+
+	}
+
+}

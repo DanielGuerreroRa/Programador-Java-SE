@@ -1,0 +1,14 @@
+package view;
+
+import java.util.Date;
+
+public class PruebaFecha {
+
+	public static void main(String[] args) {
+		//Fecha y hora actual
+		Date f1=new Date();
+		System.out.println(f1);
+
+	}
+
+}

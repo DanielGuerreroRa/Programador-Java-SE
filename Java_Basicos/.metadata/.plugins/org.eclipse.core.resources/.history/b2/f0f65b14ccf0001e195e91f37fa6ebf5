@@ -1,0 +1,27 @@
+package principal;
+
+import java.util.ArrayList;
+
+public class PruebaLista {
+
+	public static void main(String[] args) {
+		ArrayList<String> cadenas= new ArrayList<>();
+		ArrayList<Integer> numeros= new ArrayList<>();
+		var decimales=new ArrayList<Double>();
+		System.out.println(cadenas.size());
+		cadenas.add("lunes");
+		cadenas.add("martes");
+		cadenas.add(0,"miercoles");
+		//cadenas.add(7,"domingo"); //ERROR porque aun no existe la fila 8
+		System.out.println(cadenas.get(2));
+
+		numeros.add(35);
+		numeros.add(numeros.get(0));
+		numeros.add(0,100);
+		System.out.println(numeros.get(1));
+		numeros.set(1,40);
+
+
+	}
+
+}

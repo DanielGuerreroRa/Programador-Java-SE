@@ -1,0 +1,17 @@
+package view;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Prueba3 {
+	public static void main(String[] args) {
+		LocalDate f1=LocalDate.of(2023, 11, 4);
+		LocalDate f2=LocalDate.of(2024, 3, 7);
+		Period p=Period.between(f1, f2);
+		System.out.println("Meses: "+p.getMonths());
+		System.out.println("Dias: "+p.getDays());
+		System.out.println("Años: "+p.getYears());
+
+	}
+
+}

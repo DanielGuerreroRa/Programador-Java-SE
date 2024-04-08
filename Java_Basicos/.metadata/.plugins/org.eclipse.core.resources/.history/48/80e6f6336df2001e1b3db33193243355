@@ -1,0 +1,27 @@
+package view;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+import model.Direccion;
+import service.BuscadorService;
+
+public class BuscadorView {
+
+	public static void main(String[] args) {
+		BuscadorService buscadorService = new BuscadorService();
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Que temática quieres buscar:");
+		String tematica = teclado.nextLine();
+
+		HashSet<Direccion> direccionesEncontradas = buscadorService.buscarPorTematica(tematica);
+		System.out.println("Direcciones encontradas para la temática " + tematica + ": ");
+        for (Direccion direccion : direccionesEncontradas) {
+            System.out.println("- " + direccion.getUrl() + " - " + direccion.getDescripcion());
+        }
+
+
+
+	}
+
+}

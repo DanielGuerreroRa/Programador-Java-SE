@@ -1,0 +1,12 @@
+package view;
+
+public class Empleados {
+	//	Realizar un programa para la gestión de empleados de una empresa. Un empleado se caracteriza por un nombre, y tiene asociado un código de empleado.
+	//	al iniciar el programa, aparecerá el siguiente menú:
+	//	1.- Nuevo empleado
+	//	2.- Buscar empleado
+	//	3.- Eliminar empleado
+	//	4.- Mostrar nombres de todos los empleados
+	//	5.- Salir
+
+}

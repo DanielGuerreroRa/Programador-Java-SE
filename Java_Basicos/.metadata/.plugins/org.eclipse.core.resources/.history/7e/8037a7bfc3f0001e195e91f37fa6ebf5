@@ -1,0 +1,22 @@
+package principal;
+
+public class Panel_5_Premios {
+	public static void main(String[] args) {
+		//Generar un panel con 49 casillas en los cuales haya 5 premios aleatorios
+		int[][] panel= new int[7][7];
+
+		int premios=5;
+
+		//Generar 5 casillas aleatorias con premios entre las filas y columnas
+		while (premios> 0) {
+			int fila = (int) (Math.random()*7);
+			int columna = (int) (Math.random()*7);
+			
+		
+
+		}
+
+	}
+
+
+}

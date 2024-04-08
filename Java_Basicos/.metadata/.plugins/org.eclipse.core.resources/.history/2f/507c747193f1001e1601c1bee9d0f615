@@ -1,0 +1,60 @@
+package view;
+
+import java.util.Scanner;
+
+import service.NotasService;
+
+public class NotasMenu {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		NotasService n1 = new NotasService();
+
+
+		int opcion;
+		do {
+			//Presentar menu
+			n1.presentarMenu();
+			//Leer opciones y comprobar opcion elegida
+			opcion=teclado.nextInt();
+			switch(opcion) {
+			case 1:
+				n1.agregarNota(opcion);
+				break;
+			case 2:    
+				presentarMedia(n1.media());
+				break;
+			case 3:
+				presentarExtremas(n1.min(), n1.max());
+				break;
+			case 4:
+				mostrarNotas(n1.obtenerNotas());
+				break;
+			case 5:
+				System.out.println("--Hasta pronto--");
+				break;
+			default:
+				System.out.println("--Opción no valida--");
+
+
+			}
+		}while(opcion!=5); //Mientras no seleccione 5
+
+	}
+	public static void presentarMedia(double media) {
+		System.out.println("La media de las notas es: " +media);
+	}
+
+	public static void presentarExtremas(double min, double max) {
+		System.out.println("La nota mínima es: " + min);
+		System.out.println("La nota máxima es: " + max);
+	}
+
+	public static void mostrarNotas(Double[] notas) {
+		System.out.println("Todas las notas son:");
+		for (double nota :notas) {
+			System.out.println(nota);
+		}
+	}
+
+}

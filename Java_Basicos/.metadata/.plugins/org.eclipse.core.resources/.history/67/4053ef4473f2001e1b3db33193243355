@@ -1,0 +1,34 @@
+package testing;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+class TestNotasService {
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@Test
+	void testMedia() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testMax() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testMin() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testObtenerNotas() {
+		fail("Not yet implemented");
+	}
+
+}
