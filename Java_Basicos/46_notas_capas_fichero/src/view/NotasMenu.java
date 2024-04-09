@@ -73,7 +73,8 @@ public class NotasMenu {
 			for(Double n:notas) {
 				System.out.println(n);
 			}*/
-			System.out.println("Las notas son:"+Arrays.toString(service.obtenerNotas()));
+			//System.out.println("Las notas son:"+Arrays.toString(service.obtenerNotas()));
+			System.out.println("Las notas son:"+service.obtenerNotas());
 		}
 
 	}
