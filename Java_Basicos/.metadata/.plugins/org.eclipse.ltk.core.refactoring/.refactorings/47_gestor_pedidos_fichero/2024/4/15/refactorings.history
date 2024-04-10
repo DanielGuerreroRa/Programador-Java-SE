@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;test&apos; to &apos;testing&apos;&#x0D;&#x0A;- Original project: &apos;47_gestor_pedidos_fichero&apos;&#x0D;&#x0A;- Original element: &apos;47_gestor_pedidos_fichero/src/test&apos;&#x0D;&#x0A;- Renamed element: &apos;47_gestor_pedidos_fichero/src/testing&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;test&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;test" name="testing" qualified="false" references="true" stamp="1712658802466" textual="false" version="1.0"/>
+</session>
