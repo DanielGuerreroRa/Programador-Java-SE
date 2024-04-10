@@ -5,6 +5,7 @@ public class Punto3D extends Punto{
 	private int z;
 	
 	public Punto3D(int z){
+		super(); //llamada a constructor sin parámetros de la superclase
 		this.z=z;
 	}
 
