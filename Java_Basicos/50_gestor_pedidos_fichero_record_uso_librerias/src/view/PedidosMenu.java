@@ -5,20 +5,21 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import curso.io.LectorTeclado;
 import model.Pedido;
 import service.PedidosService;
 
 public class PedidosMenu {
 	static PedidosService service=new PedidosService();
 	public static void main(String[] args)  {
-		Scanner sc=new Scanner(System.in);
+		LectorTeclado lector=new LectorTeclado();              //Importamos la libreria  --  libreria creada en POO 02_clase_lector_teclado guardada en librerias_externas
 		int opcion=0;
 		do {
 			//presentar menu
 			//leer opción y comprobar opcion elegida
 			presentarMenu();
 			try{
-				opcion=Integer.parseInt(sc.nextLine());
+				opcion=lector.readInt();
 				switch(opcion) {
 					case 1:
 						agregarPedido();
@@ -52,14 +53,14 @@ public class PedidosMenu {
 				""");
 	}
 	static void agregarPedido()  {
-		Scanner sc=new Scanner(System.in);
+		LectorTeclado lector=new LectorTeclado();
 		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");		
 		System.out.println("Producto:");
-		String producto=sc.nextLine();
+		String producto=lector.readString(); //Cambiamos (sc.nextLine());                              libreria creada en POO 02_clase_lector_teclado guardada en librerias_externas
 		System.out.println("Unidades:");
-		int unidades=Integer.parseInt(sc.nextLine());
+		int unidades=lector.readInt();       //Cambiamos (lector.nextInt());
 		System.out.println("Fecha pedido (dia/mes/año):");
-		LocalDate fecha=LocalDate.parse(sc.nextLine(),sdf);	
+		LocalDate fecha=LocalDate.parse(lector.readString(),sdf);	//Cambiamos (lector.nextLine());
 		Pedido p=new Pedido(producto, unidades, fecha);
 		service.nuevoPedido(p);
 	}
@@ -71,12 +72,12 @@ public class PedidosMenu {
 		System.out.println("Fecha pedido: "+p.fechaPedido().format(sdf)+" ");
 	}
 	static void pedidosEntreFechas(){
-		Scanner sc=new Scanner(System.in);
+		LectorTeclado lector=new LectorTeclado();
 		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");	
 		System.out.println("Fecha inicio (dia/mes/año):");
-		LocalDate fecha1=LocalDate.parse(sc.nextLine(),sdf);	
+		LocalDate fecha1=LocalDate.parse(lector.readString(),sdf);	 //Cambiamos (lector.nextLine());
 		System.out.println("Fecha límite (dia/mes/año):");
-		LocalDate fecha2=LocalDate.parse(sc.nextLine(),sdf);	
+		LocalDate fecha2=LocalDate.parse(lector.readString(),sdf);	 //Cambiamos (lector.nextLine());
 		ArrayList<Pedido> pedidosEncontrados=service.pedidosEntreFechas(fecha1, fecha2);
 		for(Pedido p:pedidosEncontrados) {
 			System.out.print("Producto: "+p.producto()+" ");
