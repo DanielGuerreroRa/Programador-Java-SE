@@ -16,6 +16,10 @@ public class Punto3D extends Punto{
 	public void setZ(int z) {
 		this.z = z;
 	}
+	@Override
+	public void imprimir() {
+		System.out.println("Las corordenadas son: "+getX()+", "+getY()+", "+z);
+	}
 	
 
 }

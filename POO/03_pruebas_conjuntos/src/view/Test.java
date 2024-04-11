@@ -34,6 +34,11 @@ class Ciudad{
 	public int hashCode() {
 		return nombre.length()+poblacion;
 	}
+	@Override
+	public String toString() {
+		//return "Ciudad [nombre=" + nombre + ", poblacion=" + poblacion + "]";
+		return "{\"nombre\":"+nombre+",\"poblacion\":"+poblacion+"}";
+	}
 	
 	
 	
