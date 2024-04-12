@@ -14,9 +14,9 @@ public class Banco {
 		Scanner teclado=new Scanner(
 				System.in
 				);
-		System.out.println("Introduce saldo");
+		System.out.println("Introduce saldo:");
 				saldo=Double.parseDouble(teclado.nextLine());
-				System.out.println("Introduce límite");
+				System.out.println("Introduce límite:");
 						limite=Double.parseDouble(teclado.nextLine());
 						cuentamov=new CuentaMovimientos(saldo, limite);
 						//ahora viene el rollo menú...
@@ -48,27 +48,27 @@ public class Banco {
 		System.out.println("4.- Salir");		
 	}
 	static void ingresar() {
-		Scanner sc=new Scanner(
+		Scanner teclado=new Scanner(
 				System.in
 				);
 		double cantidad;
-		System.out.println("Introduce cantidad");
-		cantidad=Double.parseDouble(sc.nextLine());
+		System.out.println("Introduce cantidad:");
+		cantidad=Double.parseDouble(teclado.nextLine());
 		cuentamov.ingresar(cantidad);
 	}
 	static void extraer() {
-		Scanner sc=new Scanner(
+		Scanner teclado=new Scanner(
 				System.in
 				);
 		double cantidad;
-		System.out.println("Introduce cantidad");
-		cantidad=Double.parseDouble(sc.nextLine());
+		System.out.println("Introduce cantidad:");
+		cantidad=Double.parseDouble(teclado.nextLine());
 		cuentamov.extraer(cantidad);
 	}
 	static void mostrarMovimientos() {
 		ArrayList<Movimientos> movs=cuentamov.obtenerMovimientos();
 		for(Movimientos m:movs) {
-			System.out.println(m.getTipo()+":"+m.getCantidad());
+			System.out.println(m.getTipo()+": "+m.getCantidad());
 		}
 		System.out.println("Saldo final: "+cuentamov.ObtenerSaldo());
 	} 

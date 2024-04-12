@@ -27,7 +27,7 @@ public class CuentaMovimientos extends CuentaLimite{
 		@Override
 		public void extraer(double cantidad) {
 			//Cuando se crea el objeto de movimiento de una extracción
-			Movimientos m=new Movimientos(cantidad,LocalDateTime.now(),"extraccion"); 
+			Movimientos m=new Movimientos(cantidad,LocalDateTime.now(),"Extracción"); 
 			 //Agregamos objeto de movimiento creado a la lista de movimientos
 	        movimientos.add(m);
 	        //Llamamos al método extraer de la clase padre con el parámetro cantidad
@@ -37,7 +37,7 @@ public class CuentaMovimientos extends CuentaLimite{
 		@Override
 		public void ingresar(double cantidad) {
 			//Cuando se crea el objeto de movimiento de un ingreso
-			Movimientos m=new Movimientos(cantidad,LocalDateTime.now(),"ingreso");
+			Movimientos m=new Movimientos(cantidad,LocalDateTime.now(),"Ingreso");
 			//Agregamos objeto de movimiento creado a la lista de movimientos
 			movimientos.add(m);
 			//Llamamos al método extraer de la clase padre con el parámetro cantidad
