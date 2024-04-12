@@ -143,6 +143,26 @@ public static void main(String[] args) {
 //	C2 c=new C2();
 //	c.m();  //imprime c1 
 	//----------------------------------------------------------------------------------------
-	
+//	abstract class Mc{
+//		abstract void print();
+//	}
+//	class M1 extends Mc{ //NO
+//
+//
+//	}
+//	abstract class M2 extends Mc{  //SI
+//
+//	}
+//
+//	class M3 extends Mc{ //NO
+//		void print(String s){}
+//
+//	}
+//	class M4 extends Mc{ //SI
+//		void print(){}
+//	}
+//	abstract class M5 extends Mc{ //SI
+//		void print(){}
+//	} 
 }
 }
