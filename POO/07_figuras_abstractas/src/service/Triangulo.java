@@ -1,29 +1,46 @@
 package service;
 
-public class Triangulo extends Figura {
-	private double base,altura;
-	
-	
-	public Triangulo(String color, double base, double altura) {
+public class Triangulo extends Figura implements Operaciones{
+	private int base, altura;
+
+	public Triangulo(String color, int base, int altura) {
 		super(color);
 		this.base = base;
 		this.altura = altura;
 	}
-	public double getBase() {
-		return base;
-	}
-	public void setBase(double base) {
-		this.base = base;
-	}
-	public double getAltura() {
-		return altura;
-	}
-    public void setAltura(double altura) {
-		this.altura = altura;
-	}
+
 	@Override
 	public double area() {
 		return base*altura/2;
 	}
 
+	public int getBase() {
+		return base;
+	}
+
+	public void setBase(int base) {
+		this.base = base;
+	}
+
+	public int getAltura() {
+		return altura;
+	}
+
+	public void setAltura(int altura) {
+		this.altura = altura;
+	}
+
+	@Override
+	public void girar(int grados) {
+		base+=grados;
+		altura+=grados;
+		
+	}
+
+	@Override
+	public int invertir() {
+		base--;
+		return base+altura;
+	}
+	
 }

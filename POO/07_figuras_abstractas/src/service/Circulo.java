@@ -10,8 +10,9 @@ public class Circulo extends Figura{
 		return Math.PI*radio*radio;
 	}
 	
-	public Circulo(String color) {
+	public Circulo(String color, int radio) {
 		super(color);
+		this.radio = radio;
 	}
 
 	public double getRadio() {
