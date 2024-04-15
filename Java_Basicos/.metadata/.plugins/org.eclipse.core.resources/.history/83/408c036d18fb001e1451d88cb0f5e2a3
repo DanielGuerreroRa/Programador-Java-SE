@@ -9,8 +9,7 @@ import java.io.PrintStream;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+
 
 import model.Pedido;
 import utilidades.Util;
@@ -55,8 +54,8 @@ public class PedidosService {
 		return pAux;
 	}
 	
-	public List<Pedido> pedidosEntreFechas(LocalDate f1, LocalDate f2) {
-		List<Pedido> aux=new LinkedList<Pedido>();
+	public ArrayList<Pedido> pedidosEntreFechas(LocalDate f1, LocalDate f2) {
+		ArrayList<Pedido> aux=new ArrayList<Pedido>();
 		try(FileReader fr=new FileReader(fichero);
 				BufferedReader bf=new BufferedReader(fr);){
 			String linea;
