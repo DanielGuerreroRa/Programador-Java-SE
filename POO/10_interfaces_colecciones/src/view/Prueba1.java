@@ -21,6 +21,10 @@ public class Prueba1 {
 		System.out.println(sumaPares(lista)); //Utilizamos el método con la lista para que devuelva la suma de los pares
         System.out.println("La media de la lista es: ");
 		System.out.println(media(lista)); //Utilizamos el método con la lista para que devuelva la media
+		
+		//lista inmutable (fija)
+		List<Integer> nums3=List.of(40,2,11,-3,6);
+		System.out.println(sumaPares(nums3));
 
 
 	}
