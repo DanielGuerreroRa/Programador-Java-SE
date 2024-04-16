@@ -12,12 +12,12 @@ public class TestVarArgs {
 	//como parámetro, separándolos por la coma(,)
 	public static String union(String ... data) {
 		//El parámetro que guarda el número variable de argumentos es una array
-		StringBuilder builder=new StringBuilder();
-		for(String s:data) {
-			builder.append(s);
-			builder.append(",");
+			StringBuilder builder=new StringBuilder();
+			for(String s:data) {
+				builder.append(s);
+				builder.append(",");
+			}
+			return builder.toString();
 		}
-		return builder.toString();
-	}
 
-}
+	}
