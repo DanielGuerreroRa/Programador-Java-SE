@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class OperacionesService {
 	//Método que recibe una lista de numeros enteros y devuelve la suma de los pares
@@ -77,5 +78,21 @@ public class OperacionesService {
 	    }
 	}
 	
-	
+	//método que recibe una lista y devuelve la suma de todos los elementos de la lista, a la que le añadimos un
+		//valor extraido de un fichero
+		//método que recibe una lista y devuelve la suma de todos los elementos de la lista, a le añadimos
+		//un número léido desde un puerto externo 
+
+    //método que recibe una lista y devuelve la suma de todos los elementos de la lista, añadiendo el valor que se extraiga de un fichero
+	//método que recibe una lista y devuelve la suma de todos los elementos de la lista, a le añadimos un número léido desde un puerto externo 
+	public int sumaConExtra(List<Integer> numeros,Supplier<Integer> sup) {
+		int suma=0;
+		for(Integer n:numeros) {
+			suma+=n;
+		}
+		suma+=sup.get();
+		return suma;
+	}
 }
+
+	
