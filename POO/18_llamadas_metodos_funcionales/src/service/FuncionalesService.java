@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -7,6 +9,7 @@ import java.util.function.BiPredicate;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 public class FuncionalesService {
@@ -27,8 +30,22 @@ public class FuncionalesService {
 	}
 
 	public void m4(BiConsumer<String,Double> bc, BiPredicate<String,Long> bp) {
-	//BiConsumer<String, Double>:Espera un consumidor binario que tome dos argumentos, una cadena String y un valor de tipo Double, pero no devuelve ningún resultado
-	//BiPredicate<String, Long>:Espera un predicado binario que tome dos argumentos, una cadena String y un valor de tipo Long, y devuelva un resultado booleano(true o false)
+	//BiConsumer<String,Double>:Espera un consumidor binario que tome dos argumentos, una cadena String y un valor de tipo Double, pero no devuelve ningún resultado
+	//BiPredicate<String,Long>:Espera un predicado binario que tome dos argumentos, una cadena String y un valor de tipo Long, y devuelva un resultado booleano(true o false)
 	}
+	
+    public void m5(IntSupplier is, List<String> lst) {
+	//IntSupplier:Espera un proveedor de valor entero int. La interfaz funcional representa una función que no toma argumentos y devuelve un valor entero	
+    //List<String>:Espera una lista de cadenas String
+	}
+    
+	public void m6(Map<String,Integer> mp, BiConsumer<String,Long> bc) {
+	//Map<String,Integer>:Espera un mapa que asocie cadenas String con enteros Integer
+	//BiConsumer<String, Double>:Espera un consumidor binario que tome dos argumentos, una cadena String y un valor de tipo Integer, pero no devuelve ningún resultado	
+	}
+	
+	public void m7(Function<String,List<Integer>> f) {
+	//Function<String,List<Integer>>:Espera una función que tome una cadena String como entrada y devuelva una lista de enteros List<Integer>	
+	} 
 
 }
