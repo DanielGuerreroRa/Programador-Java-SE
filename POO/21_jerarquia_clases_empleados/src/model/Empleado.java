@@ -1,4 +1,4 @@
-package empresa;
+package model;
 
 import java.time.LocalDate;
 
@@ -7,13 +7,17 @@ public abstract class Empleado {
 	private int edad;
 	private LocalDate fechaIngreso;
 	private double salario;
-	public static final int BONO=600;
+	public static final double BONO=1000;
+
 	public Empleado(String nombre, int edad, LocalDate fechaIngreso, double salario) {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.fechaIngreso = fechaIngreso;
 		this.salario = salario;
+	}
+	public Empleado() {
+
 	}
 	public String getNombre() {
 		return nombre;
@@ -38,6 +42,10 @@ public abstract class Empleado {
 	}
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+	
+	public double getBONO() {
+		return BONO;
 	}
 	public abstract void incentivar();
 }
