@@ -1,0 +1,5 @@
+package service;
+
+public interface Transformar {
+	boolean test(String s);
+}

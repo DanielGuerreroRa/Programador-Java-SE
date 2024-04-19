@@ -1,0 +1,23 @@
+INDEX VERSION 1.134+C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\POO\.metadata\.plugins\org.eclipse.jdt.core
+3694577022.index
+4087316441.index
+941003943.index
+1669506773.index
+1865797976.index
+3090692322.index
+3016199983.index
+788617873.index
+2623227560.index
+4046302519.index
+1759881726.index
+3013744040.index
+659667495.index
+1442861908.index
+2393104012.index
+340786088.index
+3321186836.index
+815275251.index
+1252245269.index
+3438064471.index
+2551178890.index
+3297172490.index

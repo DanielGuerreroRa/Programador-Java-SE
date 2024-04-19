@@ -1,0 +1,16 @@
+package view;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestReplaceAll {
+
+	public static void main(String[] args) {
+		List<Integer> nums=new ArrayList<>(List.of(3,18,9,-3,2,-8));
+		//sustituimos cada elemento por su mitad
+		nums.replaceAll(n->n/2);
+		nums.forEach(n->System.out.println(n));
+	}
+
+}

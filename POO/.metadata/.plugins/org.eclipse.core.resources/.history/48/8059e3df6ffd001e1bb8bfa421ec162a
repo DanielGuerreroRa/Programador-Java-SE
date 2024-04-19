@@ -1,0 +1,35 @@
+package service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Producto;
+
+public class ProductoService {
+	//La lógica de negocio, expondrá los siguientes métodos:
+	private List<Producto> productos=new ArrayList<>();
+	
+	
+	//-eliminarPorCategoria: elimina de la lista aquellos productos que pertenezcan a la categoría indicada
+	public void eliminarPorCategoria(String categoria){
+
+	}
+	//-bajarPrecio: Baja el precio de todos productos en el porcentaje indicado
+	public void bajarPrecio(int porcentaje) {
+
+	}
+	//-subirPrecioCategoria: Sube el precio a todos los productos de la categoría indicada, en el porcentaje indicado
+	public void subirPrecioCategoria(int porcentaje,String categoria){
+
+	}
+	//-obtenerProductos: Devuelve la lista de productos existentes
+	public List<Producto> obtenerProductos() {
+		return productos;
+
+	}
+	//-agregarProducto: Añade el producto recibido 
+	public void agregarProducto(Producto P) {
+
+	}
+
+}

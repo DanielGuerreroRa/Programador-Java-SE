@@ -1,0 +1,33 @@
+package view;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Prueba1 {
+
+	public static void main(String[] args) {
+		
+		int sumaDePares= 0;
+		LinkedList<Integer> lista = new LinkedList<>();
+		lista.add(8);//Añadimos las listas
+		lista.add(2);
+		lista.add(3);
+		lista.add(4);
+		lista.add(6);
+		
+		System.out.println(sumaPares(lista)); //Utilizamos el método con la lista para que devuelva la suma de los pares
+		
+ 
+
+	}
+	//Crear un método que reciba una lista de Integer y devuelva la suma de los pares de dicha lista
+	public static int sumaPares(List<Integer> lista) {
+        int sumaPar=0;
+        for (Integer l:lista) {
+            if (l%2==0) { //Verificamos si el número es par
+                sumaPar+=l; //Sumamos los pares
+            }
+        }
+        return sumaPar; //Devuelve la suma total de los números pares
+    }
+}
