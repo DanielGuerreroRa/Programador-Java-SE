@@ -7,7 +7,7 @@ public abstract class Empleado {
 	private int edad;
 	private LocalDate fechaIngreso;
 	private double salario;
-	private final double bono=1000;
+	public static final double BONO=1000;
 
 	public Empleado(String nombre, int edad, LocalDate fechaIngreso, double salario) {
 		super();
@@ -44,8 +44,8 @@ public abstract class Empleado {
 		this.salario = salario;
 	}
 	
-	public double getBono() {
-		return bono;
+	public double getBONO() {
+		return BONO;
 	}
 	public abstract void incentivar();
 }
