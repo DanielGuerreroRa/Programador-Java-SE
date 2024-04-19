@@ -1,4 +1,4 @@
-package model;
+package empresa;
 
 import java.time.LocalDate;
 import java.time.Period;
