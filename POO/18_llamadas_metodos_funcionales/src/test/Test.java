@@ -19,6 +19,8 @@ public class Test {
 		service.m5(()->1, List.of("a","b","c"));
 		service.m6(Map.of("a",1,"b",2),(a,b)->System.out.println(a+b));
 		service.m7(a->List.of(a.length(),5,1));
+		
+		
 	}
 
 }

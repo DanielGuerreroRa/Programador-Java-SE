@@ -38,5 +38,10 @@ public class ProductoService {
 	public void agregarProducto(Producto p) {
 		productos.add(p);
 	}
+	
+	//-ordenarPorPrecio: Ordenar los productos de menor  a mayor
+	public void ordenarPorPrecio() {
+		productos.sort((a,b)->Double.compare(a.getPrecio(),b.getPrecio())); 
+	}
 
 }
