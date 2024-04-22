@@ -1,7 +1,0 @@
-package java.myutil;
-
-import java.util.AbstractList;
-
-public class NuevaLista extends AbstractList<E> {
-
-}

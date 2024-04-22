@@ -3,6 +3,7 @@ package service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import model.Cuenta;
 
@@ -31,6 +32,25 @@ public class CuentaService {
     			.filter(n->n.getDivisa().equals(divisa)) //sigue siendo String y por eso hay que contarlo
     			.count(); //devuelve un long y hau que poner el casting (int)
     }
+    //Método que a partir de una fecha, nos indique cuantas cuentas se crearon  a partir de dicha fecha
+    public int contarCuentasDespuesFecha(LocalDate fecha) {
+		return (int)cuentas.stream()
+				.filter(c->c.getFechaApertura().isAfter(fecha))
+				.count();
+	}
+    //Método que devuelva la cuenta asociada a un determinado numero
+    public Cuenta buscarCuenta(String numero) {
+    	return cuentas.stream()
+    			.filter(c->c.getNumeroCuenta().equals(numero)) //Stream<Cuenta>
+    			.findFirst() //Optional<Cuenta>
+    			.orElse(null);//Si no esta devuelve un null
+    }
+  //Método que devuelva la cuenta asociada a un determinado numero
+    public Optional<Cuenta> buscarCuentaTitular(String numero) {
+    	return cuentas.stream()
+    			.filter(c->c.getTitular().equals(numero)) //Stream<Cuenta>
+    			.findFirst(); //Optional<Cuenta>
+    } 			
 
 
 }

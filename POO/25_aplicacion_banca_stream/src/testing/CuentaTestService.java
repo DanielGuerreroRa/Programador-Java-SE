@@ -25,5 +25,12 @@ class CuentaTestService {
 	void testCuentasPorDivistas() {
 		assertEquals(2,service.cuentasPorDivistas("EUR"));
 	}
+	
+	@Test
+	void testCuentasTitular() {
+		assertTrue(service.buscarCuentaTitular("Fernando López Gómez").isPresent());
+		assertTrue(service.buscarCuentaTitular("Paquito").isEmpty());
+	}
+	
 
 }
