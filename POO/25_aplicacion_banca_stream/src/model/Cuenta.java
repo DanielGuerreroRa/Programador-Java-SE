@@ -21,5 +21,5 @@ public class Cuenta {
 	private String titular;
 	private LocalDate fechaApertura;
 	private String divisa;
-	private double salado;
+	private double saldo;
 }

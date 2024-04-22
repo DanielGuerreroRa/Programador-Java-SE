@@ -28,8 +28,8 @@ class CuentaTestService {
 	
 	@Test
 	void testCuentasTitular() {
-		assertTrue(service.buscarCuentaTitular("Fernando López Gómez").isPresent());
-		assertTrue(service.buscarCuentaTitular("Paquito").isEmpty());
+		assertTrue(service.buscarCuentaPorTitular("Fernando López Gómez").isPresent()); //Existe
+		assertTrue(service.buscarCuentaPorTitular("Paquito").isEmpty()); //No existe
 	}
 	
 

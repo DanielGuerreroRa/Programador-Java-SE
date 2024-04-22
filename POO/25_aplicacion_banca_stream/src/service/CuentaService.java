@@ -2,6 +2,7 @@ package service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,12 +46,24 @@ public class CuentaService {
     			.findFirst() //Optional<Cuenta>
     			.orElse(null);//Si no esta devuelve un null
     }
-  //Método que devuelva la cuenta asociada a un determinado numero
-    public Optional<Cuenta> buscarCuentaTitular(String numero) {
+    //Método que devuelva la cuenta asociada a un determinado numero
+    public Optional<Cuenta> buscarCuentaPorTitular(String numero) {
     	return cuentas.stream()
     			.filter(c->c.getTitular().equals(numero)) //Stream<Cuenta>
     			.findFirst(); //Optional<Cuenta>
-    } 			
-
-
+    } 		
+    //Método que devuelva la cuenta con menor saldo
+	public Cuenta cuentaMenorSaldo() {
+		/*return cuentas.stream()
+				.sorted((a,b)->Double.compare(a.getSaldo(), b.getSaldo()))
+				.findFirst() //Optional<Cuenta>
+				.orElse(null);*/
+		/*return cuentas.stream()
+				.min((a,b)->Double.compare(a.getSaldo(), b.getSaldo()))
+				.orElse(null);*/
+		return cuentas.stream()
+				.min(Comparator.comparingDouble(c->c.getSaldo()))
+				.orElse(null);
+	}
 }
+
