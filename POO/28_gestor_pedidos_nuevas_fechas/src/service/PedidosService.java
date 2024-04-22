@@ -48,7 +48,7 @@ public class PedidosService {
 				.collect(Collectors.toList());
 		
 	}
-	//Pendiente este  public Pedido proximaFecha(LocalDate fecha) {
+	 public Pedido proximaFecha(LocalDate fecha) {
 		/*Pedido aux=new Pedido();
 		aux.setFechaPedido(LocalDate.of(1,1,1));
 		//Comprobamos la diferencia de dias entre la fecha de cada pedido y la párametro, con la diferencia de días entre
@@ -60,6 +60,11 @@ public class PedidosService {
 			}
 		}
 		return aux;*/
+		 return pedidos.stream()
+	                .filter(p -> p.getFechaPedido().isAfter(fecha))
+	                .min(Comparator.comparing(p->p.getFechaPedido()))
+	                .orElse(null);
+	    
 		
 	
 	}
