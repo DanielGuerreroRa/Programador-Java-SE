@@ -9,6 +9,7 @@ public class Primitiva {
 		Stream.generate(()->(int)(Math.random()*49+1))
 		.distinct()
 		.limit(6)
+		.sorted()
 		.forEach(n->System.out.println(n));
 		
 	}

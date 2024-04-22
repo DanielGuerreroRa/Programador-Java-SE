@@ -31,6 +31,10 @@ class CuentaTestService {
 		assertTrue(service.buscarCuentaPorTitular("Fernando López Gómez").isPresent()); //Existe
 		assertTrue(service.buscarCuentaPorTitular("Paquito").isEmpty()); //No existe
 	}
+	@Test
+	void testCuentasAgrupadasPorDivistas() {
+		assertEquals(2,service.cuentasAgrupadasPorDivisa().get("JPY").size());
+	}
 	
 
 }
