@@ -1,10 +1,10 @@
-package test;
+package testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Date;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -24,10 +24,17 @@ class TestPedidosService {
 		service.nuevoPedido(new Pedido("whisky",1,f2));
 		service.nuevoPedido(new Pedido("patatas fritas",10,f3));
 	}
+	
+	@Test
+	void testPedidoProximoFecha() {
+		assertEquals("coca cola", service.pedidoProximoFecha(LocalDate.of(2023, 12, 7)).getProducto());
+		assertEquals("patatas fritas", service.pedidoProximoFecha(LocalDate.of(2022, 8, 7)).getProducto());
+	}
 
 	@Test
 	void testPedidoMasReciente() {
-		assertEquals("coca cola", service.pedidoMasReciente().getProducto());
+		assertTrue(service.pedidoMasReciente().isPresent());
+		assertEquals("coca cola", service.pedidoMasReciente().get().getProducto());
 	}
 
 	@Test
@@ -36,9 +43,5 @@ class TestPedidosService {
 		LocalDate fmax=LocalDate.of(2022, 12,31);
 		assertEquals(2, service.pedidosEntreFechas(fmin, fmax).size());
 	}
-	@Test
-	void proximaFecha() {
-		assertEquals("coca cola", service.proximaFecha(LocalDate.of(2023, 12, 7)).getProducto());
-		assertEquals("patatas fritas", service.proximaFecha(LocalDate.of(2022, 8, 7)).getProducto());
-	} 
 }
+

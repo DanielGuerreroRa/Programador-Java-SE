@@ -1,12 +1,8 @@
 package view;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import model.Pedido;
@@ -14,7 +10,7 @@ import service.PedidosService;
 
 public class PedidosMenu {
 	static PedidosService service=new PedidosService();
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args)  {
 		Scanner sc=new Scanner(System.in);
 		int opcion=0;
 		do {
@@ -55,7 +51,7 @@ public class PedidosMenu {
 				
 				""");
 	}
-	static void agregarPedido() throws ParseException  {
+	static void agregarPedido()  {
 		Scanner sc=new Scanner(System.in);
 		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");		
 		System.out.println("Producto:");
@@ -68,25 +64,28 @@ public class PedidosMenu {
 		service.nuevoPedido(p);
 	}
 	static void mostrarReciente() {
-		Pedido p=service.pedidoMasReciente();
-		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		System.out.print("Producto: "+p.getProducto()+" ");
-		System.out.print("Unidades: "+p.getUnidades()+" ");
-		System.out.println("Fecha pedido: "+p.getFechaPedido().format(sdf)+" ");
+		service.pedidoMasReciente().ifPresentOrElse(p->{
+					DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+					System.out.print("Producto: "+p.getProducto()+" ");
+					System.out.print("Unidades: "+p.getUnidades()+" ");
+					System.out.println("Fecha pedido: "+p.getFechaPedido().format(sdf)+" ");
+				},()->System.out.println("No existen pedidos")
+		);
 	}
-	static void pedidosEntreFechas() throws ParseException {
+	static void pedidosEntreFechas(){
 		Scanner sc=new Scanner(System.in);
 		DateTimeFormatter sdf=DateTimeFormatter.ofPattern("dd/MM/yyyy");	
 		System.out.println("Fecha inicio (dia/mes/año):");
 		LocalDate fecha1=LocalDate.parse(sc.nextLine(),sdf);	
 		System.out.println("Fecha límite (dia/mes/año):");
 		LocalDate fecha2=LocalDate.parse(sc.nextLine(),sdf);	
-		ArrayList<Pedido> pedidosEncontrados=service.pedidosEntreFechas(fecha1, fecha2);
+		List<Pedido> pedidosEncontrados=service.pedidosEntreFechas(fecha1, fecha2);
 		for(Pedido p:pedidosEncontrados) {
 			System.out.print("Producto: "+p.getProducto()+" ");
 			System.out.print("Unidades: "+p.getUnidades()+" ");
 			System.out.println("Fecha pedido: "+p.getFechaPedido().format(sdf)+" ");
 		}
 	}
-	
+
 }
+
