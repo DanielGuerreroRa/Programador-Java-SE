@@ -1,5 +1,0 @@
-package service;
-
-public interface Tranformar {
-	boolean test(String s);
-}
