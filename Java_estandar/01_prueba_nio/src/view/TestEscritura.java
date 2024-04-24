@@ -2,7 +2,9 @@ package view;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 
 public class TestEscritura {
 
@@ -10,14 +12,24 @@ public class TestEscritura {
 		String ruta="nombres.txt";
 		Path pt=Path.of(ruta);
 		try {
-		Files.writeString(pt, "cadena1");
-		Files.writeString(pt, "cadena2");
-		Files.writeString(pt, "cadena3");
-		}catch(IOException ex) {
+			if(Files.notExists(pt)) {
+				Files.createFile(pt);
+			}
+			Files.writeString(pt, "cadena1",StandardOpenOption.APPEND);
+			Files.writeString(pt, "cadena2",StandardOpenOption.APPEND);
+			Files.writeString(pt, "cadena3",StandardOpenOption.APPEND);
+		}
+		catch(NoSuchFileException ex) {
+			try {
+				Files.createFile(pt);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		catch(IOException ex) {
 			ex.printStackTrace();
 		}
-
-
 	}
 
 }

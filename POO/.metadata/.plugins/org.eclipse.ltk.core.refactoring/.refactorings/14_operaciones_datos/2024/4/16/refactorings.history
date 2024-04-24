@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Condicion.java&apos; to &apos;service.ListNumber.java&apos;&#x0D;&#x0A;- Original project: &apos;14_operaciones_datos&apos;&#x0D;&#x0A;- Destination element: &apos;service.ListNumber.java&apos;&#x0D;&#x0A;- Original element: &apos;service.Condicion.java&apos;" description="Copy compilation unit" destination="=15_clase_listNumber_actualizada/src&lt;service{ListNumber.java" element1="/src&lt;service{Condicion.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1713338756651" units="1" version="1.0"/>
-</session>
