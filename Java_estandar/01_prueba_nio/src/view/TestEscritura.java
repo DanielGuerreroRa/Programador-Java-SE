@@ -15,15 +15,14 @@ public class TestEscritura {
 			if(Files.notExists(pt)) {
 				Files.createFile(pt);
 			}
-			Files.writeString(pt, "cadena1",StandardOpenOption.APPEND);
-			Files.writeString(pt, "cadena2",StandardOpenOption.APPEND);
-			Files.writeString(pt, "cadena3",StandardOpenOption.APPEND);
+			Files.writeString(pt, "cadena1"+System.lineSeparator(),StandardOpenOption.APPEND);
+			Files.writeString(pt, "cadena2"+System.lineSeparator(),StandardOpenOption.APPEND);
+			Files.writeString(pt, "cadena3"+System.lineSeparator(),StandardOpenOption.APPEND);
 		}
 		catch(NoSuchFileException ex) {
 			try {
 				Files.createFile(pt);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
