@@ -1,8 +1,10 @@
 package service;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -40,91 +42,104 @@ public class FormacionService {
 
 	//Precio medio de cursos por temática
 	public Map<String, Double> precioMedioPorTematica() {
-		return cursos.stream()
-				.collect(Collectors.groupingBy(c->c.getTematica(),
-						Collectors.averagingDouble(c->c.getPrecio())));
+		public double precioMedioTematica(String tematica) {
+			return cursos.stream()
+					.filter(c->c.getTematica().equalsIgnoreCase(tematica))
+					.collect(Collectors.averagingDouble(c->c.getPrecio()));
+		}
+
+		//Total cursos finalizados antes de determinada fecha
+		public int finalizadosAntesFecha(LocalDate fecha) {
+			return (int)cursos.stream()
+					.filter(c->c.getFechaFinal().isBefore(fecha))
+					.count();
+		}
+
+		//Lista de cursos de la temática recibida como parámetro
+		public List<Curso> listaPorTematica(String tematica){
+			return cursos.stream()
+					.filter(c->c.getTematica().equalsIgnoreCase(tematica))
+					.collect(Collectors.toList()); 
+		}
+
+		//Conjunto de tematicas
+		public Set<String> conjuntoTematica(){
+			return 	cursos.stream()
+					.map(c -> c.getTematica()) //Stream<String>
+					.collect(Collectors.toSet());		
+		} 
+
+		//Lista de cursos cuyos precios se encuentran entre los dos valores recibidos como parámetros
+		public List<Curso> entrePrecios(double p1, double p2){
+			return cursos.stream()
+					.filter(c->c.getPrecio()>=p1 && c.getPrecio()<=p2)
+					.toList();
+		}
+
+		//Lista de cursos cuya duración sea inferior a los meses que se reciben como parámetro
+		public List<Curso> cursosDuracionInferiorA(int meses) {
+			return cursos.stream()
+					.filter(c->c.getFechaFinal().minusMonths(meses).isAfter(c.getFechaInicio()))
+					.toList();
+		} 
+
+		//Tabla de cursos, donde la clave sea la duración del curso(en meses) y el valor el nombre del curso
+		public Map<Integer,String> tablaNombres(){
+			return cursos.stream()
+					.collect(Collectors.toMap(c->(int)Period.between(c.getFechaInicio(), c.getFechaFinal()).toTotalMonths(), Curso::getNombre));
+		}
+
+		//Tabla de cursos, donde la clave sea la duración del curso(en meses) y el valor la lista de cursos con dicha duración
+		public Map<Integer,List<Curso>> tablaListaCursos(){
+			return cursos.stream()
+					.collect(Collectors.groupingBy(c->(int)Period.between(c.getFechaInicio(), c.getFechaFinal()).toTotalMonths()));
+		}
+		//Tabla con los cursos divididos entre caros y baratos. Caros, los que superen el precio 
+		//recibido como parámetro baratos los que no lo superen o lo igualen
+		public Map<Boolean, List<Curso>> divisionPorPrecio(double precioMedio) {
+			return cursos.stream()
+					.collect(Collectors.partitioningBy(c->c.getPrecio()<precioMedio));
+		}
+
+		//Cadena con los nombres de todos los cursos, separados por una coma
+		public String nombresDeCursosSeparadosPorComa() {
+			return cursos.stream()
+					.map(c->c.getNombre()) 
+					.collect(Collectors.joining(", ")); 
+		}
+		//Nota media de un curso
+		public double notaMediaDeCurso(Curso curso) {
+			return cursos.stream()
+					.filter(c->c.getNombre().equals(curso))//Stream<Curso>
+					.flatMap(c->c.getAlumnos().stream())//Stream<Alumno>
+					.collect(Collectors.averagingDouble(a->a.getNota()));
+		} 
+		//lista con los nombres de todos los alumnos
+		public List<String> nombresDeTodosLosAlumnos() {
+			return cursos.stream()
+					.flatMap(c->c.getAlumnos().stream()) 
+					.map(a->a.getNombre()) 
+					.toList();
+		}
+
+		//lista de alumnos matriculados en cursos de determinada temática
+		public List<Alumno> alumnosPorTematica(String tematica) {
+			return cursos.stream()
+					.filter(c->c.getTematica().equalsIgnoreCase(tematica))
+					.flatMap(c->c.getAlumnos().stream())
+					.toList(); 
+		}
+		//alumno con mayor nota 
+		public Alumno mayorNota() {
+			return cursos.stream()
+					.flatMap(c->c.getAlumnos().stream())
+					.max(Comparator.comparingDouble(a->a.getNota()))
+					.orElse(null);
+		}
+		//Lista de cursos ordenados por fecha
+		public List<Curso> cursosOrdenadosFechas(){
+			return cursos.stream()
+					.sorted(Comparator.comparing(c->c.getFechaInicio()))//Stream<Curso>
+					.toList();
+		}
 	}
-
-	//Total cursos finalizados antes de determinada fecha
-	public Curso cursoFinalizado(LocalDate fecha) {
-		return cursos.stream()
-				.max((a,b)->Long.compare(Math.abs(ChronoUnit.DAYS.between(a.getFechaFinal(), fecha)), 
-						Math.abs(ChronoUnit.DAYS.between(b.getFechaFinal(), fecha))))
-				.orElse(null); 
-	}
-
-	//Lista de cursos de la temática recibida como parámetro
-	public List<Curso> listaPorTematica(String tematica){
-		return cursos.stream()
-                .filter(c->c.getTematica().equalsIgnoreCase(tematica))
-                .collect(Collectors.toList()); 
-	}
-
-	//Conjunto de tematicas
-	 public Set<String> conjuntoDeTematicas() {
-	        return cursos.stream()
-	                .map(c->c.getTematica())
-	                .distinct()
-	                .collect(Collectors.toSet());
-	    }
-
-	//Lista de cursos cuyos precios se encuentran entre los dos valores recibidos como parámetros
-	public List<Curso> entrePrecios(double p1, double p2){
-		return cursos.stream()
-                .filter(c->c.getPrecio()>=p1 && c.getPrecio()<=p2)
-                .collect(Collectors.toList());
-	}
-
-	//Lista de cursos cuya duración sea inferior a los meses que se reciben como parámetro
-	public List<Curso> duracionInferior(LocalDate mes){
-		return cursos.stream()
-                .filter(c->c.getFechaFinal().isBefore(mes))
-                .collect(Collectors.toList()); 
-	}
-
-	//Tabla de cursos, donde la clave sea la duración del curso(en meses) y el valor el nombre del curso
-//	 public Map<Integer, String> tablaDeCursosPorDuracion() {
-//	        return cursos.stream()
-//	        		.filter((int) fechaInicio.until(fechaFin, ChronoUnit.MONTHS))
-//	                .collect(Collectors.toMap(c->(c.getFechaInicio(),c.getFechaFinal(),c.getNombre());
-//	                        
-//	    }
-
-	//Tabla de cursos, donde la clave sea la duración del curso(en meses) y el valor la lista de cursos con dicha duración
-//	 public Map<Integer, List<Curso>> tablaDeCursosPorDuracionLista() {
-//		 
-//	 }
-
-	//Tabla con los cursos divididos entre caros y baratos. Caros, los que superen el precio 
-	//recibido como parámetro baratos los que no lo superen o lo igualen
-//	 public Map<String, List<Curso>> cursosCarosYBaratos(double precioMedio) {
-//	        return cursos.stream()
-//	                .collect(Collectors.groupingBy(c->c.getPrecio())>precioMedio);
-//	    }
-	 
-	//Cadena con los nombres de todos los cursos, separados por una coma
-	public String nombresDeCursosSeparadosPorComa() {
-        return cursos.stream()
-                .map(c->c.getNombre()) 
-                .collect(Collectors.joining(", ")); 
-	}
-	//Nota media de un curso
-//	public double notaMediaDeCurso(Curso curso) {
-//		cursos.stream()
-//		.filter(c->c.getAlumno())
-//		.flatMap(a->a.getNotas().stream())
-//		.collect(Collectors.toList());
-//	}
-	//lista con los nombres de todos los alumnos
-	public List<String> nombresDeTodosLosAlumnos() {
-        return cursos.stream()
-                .flatMap(curso -> curso.getAlumnos().stream()) 
-                .map(a->a.getNombre()) 
-                .collect(Collectors.toList());
-	}
-
-	//lista de alumnos matriculados en cursos de determinada temática
-
-	//alumno con mayor nota 
-
-}
