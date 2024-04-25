@@ -12,6 +12,7 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import model.Pedido;
@@ -44,70 +45,71 @@ public class PedidosService {
 	}
 	
 	public Pedido pedidoMasReciente() {
-		Pedido pAux=null;
-		LocalDate fMax=LocalDate.of(0,1,1); //1/1/1970
-		try(FileReader fr=new FileReader(fichero);
-				BufferedReader bf=new BufferedReader(fr);){
-			String linea;
-			while((linea=bf.readLine())!=null) {
-				Pedido p=Util.convertirCadenaAPedido(linea);
-				//si encontramos pedido con fecha más reciente que fMax
-				//actualizamos fMax y pAux
-				if(p.getFechaPedido().isAfter(fMax)) {
-					fMax=p.getFechaPedido();
-					pAux=p;
-				}
-			}
+
+		try {
+			return Files.lines(pt)
+					.map(Util::convertirCadenaAPedido)
+					.max(Comparator.comparing(p->p.getFechaPedido()))
+					.orElse(null);
 		}
 		catch(IOException ex) {
 			ex.printStackTrace();
+			return null;
 		}
-		return pAux;
 	}
 	
 	public List<Pedido> pedidosEntreFechas(LocalDate f1, LocalDate f2) {
-		ArrayList<Pedido> aux=new ArrayList<Pedido>();
-		try(FileReader fr=new FileReader(fichero);
-				BufferedReader bf=new BufferedReader(fr);){
-			String linea;
-			while((linea=bf.readLine())!=null) {
-				Pedido p=Util.convertirCadenaAPedido(linea);
-				//si fecha del pedido es posterior o igual a f1 y anterior o igual a f2, se incluye
-				if(p.getFechaPedido().compareTo(f1)>=0&&p.getFechaPedido().compareTo(f2)<=0) {
-					aux.add(p);
-				}
-			}
+		
+		try {
+			return Files.lines(pt)
+					.map(Util::convertirCadenaAPedido)
+					.filter(p->p.getFechaPedido().compareTo(f1)>=0&&p.getFechaPedido().compareTo(f2)<=0)
+					.toList();
 		}
 		catch(IOException ex) {
 			ex.printStackTrace();
+			return List.of();
 		}
-		return aux;
 	}
 	
 	public Pedido pedidoProximoFecha(LocalDate fecha) {
-		Pedido pAux=new Pedido();
-		pAux.setFechaPedido(LocalDate.of(1, 1, 1));
-		try(FileReader fr=new FileReader(fichero);
-				BufferedReader bf=new BufferedReader(fr);){
-			String linea;
-			while((linea=bf.readLine())!=null) {
-				Pedido p=Util.convertirCadenaAPedido(linea);
-				if(Math.abs(ChronoUnit.DAYS.between(p.getFechaPedido(), fecha))<
-						Math.abs(ChronoUnit.DAYS.between(pAux.getFechaPedido(), fecha))) {
-					pAux=p;
-				}
-			}
+	
+		try {
+			return Files.lines(pt)
+					.map(Util::convertirCadenaAPedido)
+					.min(Comparator.comparingLong(p->Math.abs(ChronoUnit.DAYS.between(p.getFechaPedido(), fecha))))
+					.orElse(null);
 		}
 		catch(IOException ex) {
 			ex.printStackTrace();
+			return null;
 		}
-		return pAux;
 	}
 	
 	public void eliminarPedido(String producto) {
-		
+		try {
+			List<String> pedidos= Files.lines(pt)
+					.map(Util::convertirCadenaAPedido)//Stream<Pedido>
+					.filter(p->!p.getProducto().equals(producto))//Stream<Pedido>
+					.map(Util::convertirPedidoACadena)//Stream<String>
+					.toList();
+			Files.write(pt, pedidos);
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+			
+		}
 	}
 	public List<Pedido> pedidos(){
-		
+		try {
+			return Files.lines(pt)
+					.map(Util::convertirCadenaAPedido)//Stream<Pedido>
+					.toList();
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+			return null;
+		}
 	}
 }
+

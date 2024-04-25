@@ -71,7 +71,6 @@ public class NotasService {
 					.map(s->Double.parseDouble(s))//Stream<Double>
 					.toList();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			throw new ErrorFuenteDatosException(); //provoca la excepción
 		}
