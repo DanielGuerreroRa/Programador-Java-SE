@@ -13,7 +13,6 @@ class TestNotasService {
 	static NotasService service=new NotasService();
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		//Para resetear las notas anteriores cada vez que haga la prueba
 		service.borrarNotas();
 		//añadimos unas cuantas notas de prueba
 		service.agregarNota(5);
