@@ -66,7 +66,7 @@ public class PaisesService {
 	//nombre del pais
 	public String getPaisFiltradoPor(String capital)  {
 		return getStreamPaises()
-		.filter(p -> p.getCapital() != null && p.getCapital().equals(capital))//Stream<Pais>
+		.filter(p->p.getCapital() != null && p.getCapital().equals(capital))//Stream<Pais>
 		.findFirst()//Optional<Pais>
 		.map(p->p.getNombre())//Optional<String>
 		.orElse("");

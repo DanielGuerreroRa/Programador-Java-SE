@@ -1724,3 +1724,205 @@ java.lang.IllegalStateException: must specify at least one linked position
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 12:47:38.313
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:14:07.382
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:14:07.383
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:14:07.384
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:14:07.385
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:14:07.391
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:14:07.393
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:14:09.005
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:14:09.008
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:15:04.534
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:15:04.537
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:15:16.208
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:15:16.211
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:18:01.363
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:18:01.364
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:18:01.364
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:18:01.365
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:18:01.370
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:18:01.372
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:18:18.287
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:18:18.289
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:18:22.757
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:18:22.758
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:19:27.965
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:19:27.967
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:19:44.978
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:19:44.978
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:19:44.979
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:19:44.979
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:19:44.983
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-30 13:19:44.986
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:21:13.542
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:21:13.544
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:21:14.639
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:21:14.641
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:35:23.755
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-04-30 13:35:23.757
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2024-04-30 13:38:24.707
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:922)
+	at org.eclipse.jdt.internal.core.PackageFragment.getAttachedJavadoc(PackageFragment.java:585)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.readHTMLContent(CoreJavadocAccess.java:184)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.getHTMLContent(CoreJavadocAccess.java:119)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:85)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.getJavadocHtml(JavadocView.java:957)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.computeInput(JavadocView.java:822)
+	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:730)
+Caused by: java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2057)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2052)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:2051)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1609)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:867)
+	... 7 more
+Caused by: java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2000)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:853)
+	... 7 more
+Caused by: java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2057)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2052)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:2051)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1609)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:867)
+	at org.eclipse.jdt.internal.core.PackageFragment.getAttachedJavadoc(PackageFragment.java:585)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.readHTMLContent(CoreJavadocAccess.java:184)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.getHTMLContent(CoreJavadocAccess.java:119)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:85)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.getJavadocHtml(JavadocView.java:957)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.computeInput(JavadocView.java:822)
+	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:730)
+Caused by: java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2000)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:853)
+	... 7 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 985 2024-04-30 13:38:24.708
+!MESSAGE Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2057)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:2052)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:2051)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1609)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:867)
+	at org.eclipse.jdt.internal.core.PackageFragment.getAttachedJavadoc(PackageFragment.java:585)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.readHTMLContent(CoreJavadocAccess.java:184)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.getHTMLContent(CoreJavadocAccess.java:119)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:85)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.getJavadocHtml(JavadocView.java:957)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.computeInput(JavadocView.java:822)
+	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:730)
+Caused by: java.io.IOException: Server returned HTTP response code: 500 for URL: https://docs.oracle.com/en/java/javase/17/docs/api/java/package-summary.html
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2000)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:853)
+	... 7 more
