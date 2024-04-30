@@ -1,3 +1,5 @@
+package principal;
+
 import java.util.List;
 
 import model.Curso;
