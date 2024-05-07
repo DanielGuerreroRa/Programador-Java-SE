@@ -6,6 +6,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\19_datos_provincias_dao"/>
+			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\18_agenda_contactos_dao"/>
+			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\17_agenda_contactos_factory"/>
+			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\16_actualizacion_cursos_alumnos_locator"/>
+			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\15_patron_singleton"/>
+			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\14_datos_provincias_bd"/>
 			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\13_tienda_virtual"/>
 			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\11_prueba_referencia_metodos"/>
 			<item value="C:\Users\manana\Desktop\Daniel Guerrero\Programador-Java-SE\Java_estandar\12_datos_provincias"/>
@@ -15,7 +21,7 @@
 		<section name="SmartImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="706"/>
 			<item key="DIALOG_Y_ORIGIN" value="191"/>
-			<item key="DIALOG_WIDTH" value="963"/>
+			<item key="DIALOG_WIDTH" value="1005"/>
 			<item key="DIALOG_HEIGHT" value="629"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
