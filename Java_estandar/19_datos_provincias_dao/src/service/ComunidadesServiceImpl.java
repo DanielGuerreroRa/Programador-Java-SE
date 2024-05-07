@@ -3,6 +3,7 @@ package service;
 import java.util.List;
 
 import dao.ComunidadesDao;
+import dao.ComunidadesDaoFactory;
 import dao.MunicipiosDao;
 import dao.ProvinciasDao;
 import model.Comunidad;
@@ -13,6 +14,12 @@ public class ComunidadesServiceImpl implements ComunidadesService {
 	ComunidadesDao comunidadesDao;
 	ProvinciasDao provinciasDao;
 	MunicipiosDao municipiosDao;	
+	
+	public ComunidadesServiceImpl() {
+		comunidadesDao=ComunidadesDaoFactory.getComunidadesDao();
+		provinciasDao=ComunidadesDaoFactory.getProvinciasDao();
+		municipiosDao=ComunidadesDaoFactory.getMunicipiosDao();
+	}
 	@Override
 	public int saveComunidades(List<Comunidad> comunidades) {
 		/*solucion 1
