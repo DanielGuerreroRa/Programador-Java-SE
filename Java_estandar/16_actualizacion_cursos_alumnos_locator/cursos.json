@@ -1,0 +1,4 @@
+[{"idCurso":111,"curso":"Java","duracion":130,"precio":230.6,"alumnos":[{"nombre":"Juan","edad":26,"dni":"2234A","nota":6.5},{"nombre":"Pilar","edad":31,"dni":"2661q","nota":2.5},{"nombre":"Lidia","edad":30,"dni":"7812p","nota":7.5}]},
+{"idCurso":222,"curso":"Python","duracion":90,"precio":180,"alumnos":[{"nombre":"Sergio","edad":35,"dni":"7456g","nota":9.2},{"nombre":"Elena","edad":19,"dni":"1243z","nota":3.3},{"nombre":"Cerebrin","edad":23,"dni":"1678y","nota":8.9}]},
+{"idCurso":333,"curso":"C++","duracion":110,"precio":190,"alumnos":[{"nombre":"Elena","edad":26,"dni":"2567i","nota":7.0},{"nombre":"Silvia","edad":22,"dni":"5623n","nota":5.0},{"nombre":"Ana","edad":32,"dni":"9003r","nota":7.1}]},
+{"idCurso":444,"curso":"NET","duracion":90,"precio":170.4,"alumnos":[{"nombre":"Raúl","edad":23,"dni":"47032h","nota":6.9},{"nombre":"Esteban","edad":50,"dni":"6744u","nota":4.8},{"nombre":"Marta","edad":23,"dni":"7690k","nota":8.5}]}]
