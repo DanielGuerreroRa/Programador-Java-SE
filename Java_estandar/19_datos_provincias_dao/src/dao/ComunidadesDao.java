@@ -5,11 +5,12 @@ import java.util.List;
 import model.Comunidad;
 
 public interface ComunidadesDao {
-	void save(Comunidad codigo);
+	void save(Comunidad comunidad);
 	Comunidad findByComunidad(String nombreComunidad); 
 	
-	static ComunidadesDao of() {
-		return new ComunidadesDaoImpl();
-	}
+	void save(List<Comunidad> comunidades);
+	
+	boolean existComundidad(String codigo);
+		
 
 }

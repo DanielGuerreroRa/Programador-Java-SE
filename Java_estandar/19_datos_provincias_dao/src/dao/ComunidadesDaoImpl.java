@@ -49,5 +49,38 @@ public class ComunidadesDaoImpl implements ComunidadesDao {
 		return null;
 	}
 
+	@Override
+	public void save(List<Comunidad> comunidades) {
+		try (Connection con=LocatorConnection.getConnection();){
+			String sql="insert into comunidades(codigo,nombre) values(?,?)";
+			PreparedStatement ps=con.prepareStatement(sql);
+			con.setAutoCommit(false);//cancelamos autocommit
+			for(Comunidad c:comunidades){
+				ps.setString(1, c.getCodigo());
+				ps.setString(2, c.getNombre());
+				ps.execute();
+			}
+			con.commit();
+		}
+		catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public boolean existComundidad(String codigo) {
+		try (Connection con=LocatorConnection.getConnection();){
+			String sql="select * from comunidades where codigo=?";
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1, codigo);			
+			ResultSet rs=ps.executeQuery();
+			return rs.next();
+		}
+		catch(SQLException ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
 
 }

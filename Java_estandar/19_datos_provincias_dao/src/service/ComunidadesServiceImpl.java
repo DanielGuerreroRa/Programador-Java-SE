@@ -16,7 +16,6 @@ public class ComunidadesServiceImpl implements ComunidadesService {
 		ProvinciasDao provinciasDao;
 		
 		public ComunidadesServiceImpl() {
-			comunidadesDao = ComunidadesDao.of();
 			municipiosDao = MunicipiosDao.of();
 			provinciasDao = ProvinciasDao.of();
 			
@@ -26,7 +25,7 @@ public class ComunidadesServiceImpl implements ComunidadesService {
 	public int saveComunidades(List<Comunidad> comunidades)  {
 		int i=0;
 		for(Comunidad comunidad:comunidades) {
-			if (comunidadesDao.findByComunidad(comunidad.getNombre()) ==null) {
+			if (comunidadesDao.findByComunidad(comunidad.getNombre())==null) {
 				comunidadesDao.save(comunidad);
 				i++;
 			}
@@ -39,7 +38,7 @@ public class ComunidadesServiceImpl implements ComunidadesService {
 	public int saveProvincias(List<Provincia> provincias) {
 		int i=0;
 		for(Provincia provincia:provincias) {
-			if (provinciasDao.findByName(provincia.getNombre()) ==null) {
+			if (provinciasDao.findByName(provincia.getNombre())==null) {
 				provinciasDao.save(provincia);
 				i++;
 			}
@@ -52,11 +51,11 @@ public class ComunidadesServiceImpl implements ComunidadesService {
 	public int saveMunicipios(List<Municipio> municipios) {
 		int i=0;
 		for(Municipio municipio:municipios) {
-			if (municipiosDao.findByName(municipio.getNombre()) ==null) {
+			if (municipiosDao.findByName(municipio.getNombre())==null) {
 				municipiosDao.save(municipio);
 				i++;
+
 			}
-	
 		}
 		return i;
 	}
