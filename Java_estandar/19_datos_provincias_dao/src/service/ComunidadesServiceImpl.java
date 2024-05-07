@@ -10,53 +10,52 @@ import model.Municipio;
 import model.Provincia;
 
 public class ComunidadesServiceImpl implements ComunidadesService {
-	
-		ComunidadesDao comunidadesDao;
-		MunicipiosDao municipiosDao;
-		ProvinciasDao provinciasDao;
-		
-		public ComunidadesServiceImpl() {
-			municipiosDao = MunicipiosDao.of();
-			provinciasDao = ProvinciasDao.of();
-			
-		}
-	
+	ComunidadesDao comunidadesDao;
+	ProvinciasDao provinciasDao;
+	MunicipiosDao municipiosDao;	
 	@Override
-	public int saveComunidades(List<Comunidad> comunidades)  {
-		int i=0;
-		for(Comunidad comunidad:comunidades) {
-			if (comunidadesDao.findByComunidad(comunidad.getNombre())==null) {
-				comunidadesDao.save(comunidad);
-				i++;
+	public int saveComunidades(List<Comunidad> comunidades) {
+		/*solucion 1
+		int cont=0;
+		for(Comunidad c:comunidades) {
+			if(!comunidadesDao.existComunidad(c.getCodigo())) {
+				comunidadesDao.save(c);
+				cont++;
 			}
-	
 		}
-		return i;
+		return cont;
+		
+		return (int)comunidades.stream()
+				.filter(c->!comunidadesDao.existComunidad(c.getCodigo()))
+				.peek(c->comunidadesDao.save(c))
+				.count();
+		*/
+		//solución 2
+		List<Comunidad> aux=comunidades.stream()
+				.filter(c->!comunidadesDao.existComunidad(c.getCodigo()))
+				.toList();
+		comunidadesDao.save(aux);
+		return aux.size();
 	}
 
 	@Override
 	public int saveProvincias(List<Provincia> provincias) {
-		int i=0;
-		for(Provincia provincia:provincias) {
-			if (provinciasDao.findByName(provincia.getNombre())==null) {
-				provinciasDao.save(provincia);
-				i++;
-			}
-	
-		}
-		return i;
+		List<String> codigos=provinciasDao.findCodigos();
+		List<Provincia> aux=provincias.stream()
+				.filter(p->!codigos.contains(p.getCodigo()))
+				.toList();
+		provinciasDao.saveProvincias(aux);
+		return aux.size();
 	}
 
 	@Override
 	public int saveMunicipios(List<Municipio> municipios) {
-		int i=0;
-		for(Municipio municipio:municipios) {
-			if (municipiosDao.findByName(municipio.getNombre())==null) {
-				municipiosDao.save(municipio);
-				i++;
-
-			}
-		}
-		return i;
+		List<String> codigos=municipiosDao.findCodigos();
+		List<Municipio> aux=municipios.stream()
+				.filter(p->!codigos.contains(p.getCodigo()))
+				.toList();
+		municipiosDao.saveMunicipios(aux);
+		return aux.size();
 	}
+	
 }

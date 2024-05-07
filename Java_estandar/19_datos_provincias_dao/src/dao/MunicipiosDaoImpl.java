@@ -1,66 +1,57 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import locator.LocatorConnection;
-import model.Comunidad;
 import model.Municipio;
 
-public class MunicipiosDaoImpl implements MunicipiosDao{
+class MunicipiosDaoImpl implements MunicipiosDao {
 
 	@Override
-	public void save(Municipio municipio) {
-		try(Connection con=LocatorConnection.getConnection()) {
-			String sql="insert into municipios"
-					+ "(codigo,nombre,codProvincia,poblacion,altitud,superficie)"
-					+ " value(?,?,?,?,?,?)"; 
+	public void saveMunicipios(List<Municipio> municipios) {
+		try (Connection con=LocatorConnection.getConnection();){
+			String sql="insert into municipios(codigo,nombre,codProvincia,superficie,altitud,poblacion) values(?,?,?,?,?,?)";
 			PreparedStatement ps=con.prepareStatement(sql);
-			 
-				ps.setString(1, municipio.getCodigo());
-				ps.setString(2, municipio.getNombre());
-				ps.setString(3, municipio.getCodProvincia());
-				ps.setInt(4, municipio.getPoblacion());
-				ps.setInt(5, municipio.getAltitud());
-				ps.setDouble(6, municipio.getSuperficie());
-				ps.execute();//ejecutarla sentencia SQL
-			
+			con.setAutoCommit(false);//cancelamos autocommit
+			for(Municipio m:municipios){
+				ps.setString(1, m.getCodigo());
+				ps.setString(2, m.getNombre());
+				ps.setString(3, m.getCodProvincia());
+				ps.setDouble(4, m.getSuperficie());
+				ps.setInt(5, m.getAltitud());
+				ps.setInt(6, m.getPoblacion());
+				ps.execute();
+			}
+			con.commit();//confirmamos tx si no ha habido fallos
 		}
 		catch(SQLException ex) {
 			ex.printStackTrace();
 		}
 
 	}
-	
 
 	@Override
-	public Municipio findByName(String nombre) {
-		try(Connection con=LocatorConnection.getConnection()) {
-			String sql="select * from municipios where nombre=?";
-			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setString(1, nombre);
-			ResultSet rs=ps.executeQuery();
-			if(rs.next()) {
-				return new Municipio(rs.getString("codigo"),
-						rs.getString("nombre"),
-						rs.getString("codProvincia"),
-						rs.getInt("poblacion"),
-						rs.getInt("altitud"),
-						rs.getDouble("superficie")
-						);
-						
+	public List<String> findCodigos() {
+		List<String> codigos=new ArrayList<String>();
+		try (Connection con=LocatorConnection.getConnection();){
+			String sql="select codigo from municipios";
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery(sql);
+			while(rs.next()) {
+				codigos.add(rs.getString(1));
 			}
-			return null;
 		}
 		catch(SQLException ex) {
 			ex.printStackTrace();
-			
-			
 		}
-		return null;
+		return codigos;
 	}
 
 }

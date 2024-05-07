@@ -11,5 +11,4 @@ public class LocatorConnection {
 	public static Connection getConnection() throws SQLException {
 		return DriverManager.getConnection(cadenaConexion,usuario,password);
 	}
-
 }

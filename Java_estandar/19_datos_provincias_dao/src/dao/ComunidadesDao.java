@@ -6,11 +6,6 @@ import model.Comunidad;
 
 public interface ComunidadesDao {
 	void save(Comunidad comunidad);
-	Comunidad findByComunidad(String nombreComunidad); 
-	
 	void save(List<Comunidad> comunidades);
-	
-	boolean existComundidad(String codigo);
-		
-
+	boolean existComunidad(String codigo);
 }

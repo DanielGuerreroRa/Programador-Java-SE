@@ -11,7 +11,7 @@ import java.util.List;
 import locator.LocatorConnection;
 import model.Provincia;
 
-public class ProvinciasDaoImpl implements ProvinciasDao {
+class ProvinciasDaoImpl implements ProvinciasDao {
 
 	@Override
 	public void saveProvincias(List<Provincia> provincias) {
@@ -48,18 +48,6 @@ public class ProvinciasDaoImpl implements ProvinciasDao {
 			ex.printStackTrace();
 		}
 		return codigos;
-	}
-
-	@Override
-	public void save(Provincia provincia) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Provincia findByName(String nombreProvincia) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

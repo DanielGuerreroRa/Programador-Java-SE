@@ -9,44 +9,22 @@ import java.util.List;
 import locator.LocatorConnection;
 import model.Comunidad;
 
-public class ComunidadesDaoImpl implements ComunidadesDao {
+class ComunidadesDaoImpl implements ComunidadesDao {
 
 	@Override
 	public void save(Comunidad comunidad) {
-		try(Connection con=LocatorConnection.getConnection()) {
-			String sql="insert into comunidades(codigo,nombre) value(?,?)"; 
+		try (Connection con=LocatorConnection.getConnection();){
+			String sql="insert into comunidades(codigo,nombre) values(?,?)";
 			PreparedStatement ps=con.prepareStatement(sql);
-			 
-				ps.setString(1, comunidad.getCodigo());
-				ps.setNString(2, comunidad.getNombre());
-				ps.execute();//ejecutarla sentencia SQL.
-			
+			ps.setString(1, comunidad.getCodigo());
+			ps.setString(2, comunidad.getNombre());
+			ps.execute();
+		
 		}
 		catch(SQLException ex) {
 			ex.printStackTrace();
 		}
 
-	}
-	
-	public Comunidad findByComunidad(String nombreComunidad) {
-		try(Connection con=LocatorConnection.getConnection()) {
-			String sql="select * from comunidades where nombre=?";
-			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setString(1, nombreComunidad);
-			ResultSet rs=ps.executeQuery();
-			if(rs.next()) {
-				return new Comunidad(rs.getString("codigo"),
-						rs.getString("nombre"));
-						
-			}
-			return null;
-		}
-		catch(SQLException ex) {
-			ex.printStackTrace();
-			
-			
-		}
-		return null;
 	}
 
 	@Override
@@ -69,7 +47,7 @@ public class ComunidadesDaoImpl implements ComunidadesDao {
 	}
 
 	@Override
-	public boolean existComundidad(String codigo) {
+	public boolean existComunidad(String codigo) {
 		try (Connection con=LocatorConnection.getConnection();){
 			String sql="select * from comunidades where codigo=?";
 			PreparedStatement ps=con.prepareStatement(sql);
