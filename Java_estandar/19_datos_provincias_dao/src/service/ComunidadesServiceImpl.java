@@ -10,7 +10,7 @@ import model.Comunidad;
 import model.Municipio;
 import model.Provincia;
 
-public class ComunidadesServiceImpl implements ComunidadesService {
+class ComunidadesServiceImpl implements ComunidadesService {
 	ComunidadesDao comunidadesDao;
 	ProvinciasDao provinciasDao;
 	MunicipiosDao municipiosDao;	
